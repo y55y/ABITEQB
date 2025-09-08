@@ -378,6 +378,7 @@
                     </button>
                 </div>
             </div>
+
         </div>
 
         <!-- PAGE 2 - QUIZ -->
@@ -902,24 +903,231 @@
             updateWrongQuestionsSection();
         }
 
-        // Load wrong questions from localStorage (cookies)
+
+        // Enhanced storage configuration with device compatibility
+        const STORAGE_CONFIG = {
+            // Current version - increment when structure changes
+            version: '3.1',
+            // Storage keys with versioning
+            keys: {
+                wrongQuestions: 'abInitioQuiz_wrongQuestions_v3',
+                correctedQuestions: 'abInitioQuiz_correctedQuestions_v3',
+                backup: 'abInitioQuiz_backup_v3',
+                metadata: 'abInitioQuiz_metadata_v3'
+            },
+            // Migration versions mapping
+            migrations: ['2.0', '3.0', '3.1']
+        };
+
+
+        // Robust data storage
         function loadWrongQuestions() {
-            const stored = localStorage.getItem('aviationQuizWrongQuestions');
-            if (stored) {
-                wrongQuestions = new Set(JSON.parse(stored));
-            }
-            
-            const corrected = localStorage.getItem('aviationQuizCorrectedQuestions');
-            if (corrected) {
-                correctedQuestions = new Set(JSON.parse(corrected));
+            try {
+                // Check for version migration first
+                const metadata = loadMetadata();
+                if (metadata && metadata.version !== STORAGE_CONFIG.version) {
+                    migrateData(metadata.version);
+                }
+
+                // Load primary data
+                const stored = localStorage.getItem(STORAGE_CONFIG.keys.wrongQuestions);
+                if (stored) {
+                    const parsedData = JSON.parse(stored);
+                    wrongQuestions = new Set(parsedData.questions || []);
+                    console.log(`Loaded ${wrongQuestions.size} wrong questions`);
+                }
+
+                const corrected = localStorage.getItem(STORAGE_CONFIG.keys.correctedQuestions);
+                if (corrected) {
+                    const parsedData = JSON.parse(corrected);
+                    correctedQuestions = new Set(parsedData.questions || []);
+                    console.log(`Loaded ${correctedQuestions.size} corrected questions`);
+                }
+
+                // Validate data integrity
+                validateDataIntegrity();
+
+            } catch (error) {
+                console.error('Error loading quiz data:', error);
+                // Attempt recovery from backup
+                recoverFromBackup();
             }
         }
 
-        // Save wrong questions to localStorage
+
+        // Enhanced save function
         function saveWrongQuestions() {
-            localStorage.setItem('aviationQuizWrongQuestions', JSON.stringify([...wrongQuestions]));
-            localStorage.setItem('aviationQuizCorrectedQuestions', JSON.stringify([...correctedQuestions]));
+            try {
+                const timestamp = new Date().toISOString();
+
+                // Save primary data with metadata
+                const wrongData = {
+                    questions: [...wrongQuestions],
+                    timestamp: timestamp,
+                    version: STORAGE_CONFIG.version,
+                    checksum: generateChecksum([...wrongQuestions])
+                };
+
+                const correctedData = {
+                    questions: [...correctedQuestions],
+                    timestamp: timestamp,
+                    version: STORAGE_CONFIG.version,
+                    checksum: generateChecksum([...correctedQuestions])
+                };
+
+                // Save to localStorage
+                localStorage.setItem(STORAGE_CONFIG.keys.wrongQuestions, JSON.stringify(wrongData));
+                localStorage.setItem(STORAGE_CONFIG.keys.correctedQuestions, JSON.stringify(correctedData));
+
+                // Update metadata
+                saveMetadata(timestamp);
+
+                // Create backup
+                createBackup(wrongData, correctedData, timestamp);
+
+                console.log(`Saved ${wrongQuestions.size} wrong and ${correctedQuestions.size} corrected questions`);
+
+            } catch (error) {
+                console.error('Error saving quiz data:', error);
+                // Fallback to sessionStorage
+                saveToSessionStorage();
+            }
         }
+
+        // Load metadata
+        function loadMetadata() {
+            try {
+                const metadata = localStorage.getItem(STORAGE_CONFIG.keys.metadata);
+                return metadata ? JSON.parse(metadata) : null;
+            } catch (error) {
+                console.error('Error loading metadata:', error);
+                return null;
+            }
+        }
+
+
+        // Save metadata
+        function saveMetadata(timestamp) {
+            const metadata = {
+                version: STORAGE_CONFIG.version,
+                lastUpdated: timestamp,
+                questionCount: wrongQuestions.size + correctedQuestions.size,
+                wrongCount: wrongQuestions.size,
+                correctedCount: correctedQuestions.size
+            };
+            localStorage.setItem(STORAGE_CONFIG.keys.metadata, JSON.stringify(metadata));
+        }
+
+        // Generate simple checksum for data integrity
+        function generateChecksum(data) {
+            return data.sort().join('').length.toString(36);
+        }
+
+        // Validate data integrity
+        function validateDataIntegrity() {
+            const storedWrong = localStorage.getItem(STORAGE_CONFIG.keys.wrongQuestions);
+            const storedCorrected = localStorage.getItem(STORAGE_CONFIG.keys.correctedQuestions);
+
+            if (storedWrong) {
+                const wrongData = JSON.parse(storedWrong);
+                if (wrongData.checksum !== generateChecksum(wrongData.questions || [])) {
+                    console.warn('Wrong questions data integrity check failed');
+                }
+            }
+
+            if (storedCorrected) {
+                const correctedData = JSON.parse(storedCorrected);
+                if (correctedData.checksum !== generateChecksum(correctedData.questions || [])) {
+                    console.warn('Corrected questions data integrity check failed');
+                }
+            }
+        }
+
+        // Create backup
+        function createBackup(wrongData, correctedData, timestamp) {
+            try {
+                const backupData = {
+                    wrongQuestions: wrongData,
+                    correctedQuestions: correctedData,
+                    timestamp: timestamp,
+                    version: STORAGE_CONFIG.version,
+                    type: 'automatic_backup'
+                };
+                localStorage.setItem(STORAGE_CONFIG.keys.backup, JSON.stringify(backupData));
+            } catch (error) {
+                console.error('Error creating backup:', error);
+            }
+        }
+
+        // Recover from backup
+        function recoverFromBackup() {
+            try {
+                const backup = localStorage.getItem(STORAGE_CONFIG.keys.backup);
+                if (backup) {
+                    const backupData = JSON.parse(backup);
+                    wrongQuestions = new Set(backupData.wrongQuestions?.questions || []);
+                    correctedQuestions = new Set(backupData.correctedQuestions?.questions || []);
+                    console.log('Data recovered from backup');
+                    return true;
+                }
+            } catch (error) {
+                console.error('Error recovering from backup:', error);
+            }
+            return false;
+        }
+
+        // Session storage fallback
+        function saveToSessionStorage() {
+            try {
+                sessionStorage.setItem(STORAGE_CONFIG.keys.wrongQuestions, JSON.stringify({
+                    questions: [...wrongQuestions],
+                    timestamp: new Date().toISOString()
+                }));
+                sessionStorage.setItem(STORAGE_CONFIG.keys.correctedQuestions, JSON.stringify({
+                    questions: [...correctedQuestions],
+                    timestamp: new Date().toISOString()
+                }));
+            } catch (error) {
+                console.error('Error saving to sessionStorage:', error);
+            }
+        }
+
+        // Migrate data from old versions
+        function migrateData(fromVersion) {
+            console.log(`Migrating data from version ${fromVersion} to ${STORAGE_CONFIG.version}`);
+
+            try {
+                // Migrate from v2.0 to v3.0
+                if (fromVersion === '2.0') {
+                    const oldWrong = localStorage.getItem('aviationQuizWrongQuestions');
+                    const oldCorrected = localStorage.getItem('aviationQuizCorrectedQuestions');
+
+                    if (oldWrong) {
+                        const questions = JSON.parse(oldWrong);
+                        wrongQuestions = new Set(questions);
+                    }
+                    if (oldCorrected) {
+                        const questions = JSON.parse(oldCorrected);
+                        correctedQuestions = new Set(questions);
+                    }
+
+                    // Clean up old keys after successful migration
+                    localStorage.removeItem('aviationQuizWrongQuestions');
+                    localStorage.removeItem('aviationQuizCorrectedQuestions');
+
+                    console.log('Migration completed successfully');
+                }
+
+                // Save with new structure
+                saveWrongQuestions();
+
+            } catch (error) {
+                console.error('Migration failed:', error);
+                // Try recovery from backup
+                recoverFromBackup();
+            }
+        }
+
 
         // Generate quiz parts (10 questions each)
         function generateQuizParts() {
