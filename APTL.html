@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Quiz System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* PAGE 1 - HOME STYLES */
+        .home-page {
+            padding: 30px;
+        }
+
+        .quiz-section {
+            margin-bottom: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .quiz-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .quiz-btn {
+            padding: 15px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quiz-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .quiz-btn .question-count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .wrong-questions-section {
+            background: #fff3cd;
+            border-left: 5px solid #f39c12;
+        }
+
+        .wrong-questions-section h3 {
+            color: #856404;
+        }
+
+        .wrong-info {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(243, 156, 18, 0.1);
+            border-radius: 5px;
+            color: #856404;
+        }
+
+        .disabled-btn {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* PAGE 2 - QUIZ STYLES */
+        .quiz-page {
+            display: none;
+        }
+
+        .controls {
+            background: #ecf0f1;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .back-btn {
+            padding: 8px 16px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #c0392b;
+        }
+
+        .question-info {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .quiz-content {
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .question-number {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .question-text {
+            font-size: 1.3em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+        }
+
+        .options {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: white;
+            border: 2px solid #bdc3c7;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            border-color: #3498db;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+        }
+
+        .option.selected {
+            border-color: #3498db;
+            background: #ebf3fd;
+        }
+
+        .option.correct {
+            border-color: #27ae60;
+            background: #d5f4e6;
+        }
+
+        .option.incorrect {
+            border-color: #e74c3c;
+            background: #fdeaea;
+        }
+
+        .option-letter {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #95a5a6;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .option.correct .option-letter {
+            background: #27ae60;
+        }
+
+        .option.incorrect .option-letter {
+            background: #e74c3c;
+        }
+
+        .option-text {
+            flex: 1;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        .result-icon {
+            width: 30px;
+            height: 30px;
+            margin-left: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .option.answered .result-icon {
+            opacity: 1;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: #34495e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: #2c3e50;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .completion-message {
+            text-align: center;
+            padding: 20px;
+            background: #d5f4e6;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .completion-message h3 {
+            color: #27ae60;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+            
+            .home-page {
+                padding: 15px;
+            }
+            
+            .quiz-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .quiz-content {
+                padding: 15px;
+            }
+            
+            .question-text {
+                font-size: 1.1em;
+                padding: 15px;
+            }
+            
+            .option {
+                padding: 12px;
+            }
+            
+            .option-text {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">ATPL Aviation Quiz</div>
+            <div>Aircraft Technical and General Knowledge</div>
+        </div>
+        
+        <!-- PAGE 1 - HOME -->
+        <div id="homePage" class="home-page">
+            <div class="quiz-section">
+                <h3>Complete Quiz Sets</h3>
+                <div class="quiz-options">
+                    <button class="quiz-btn" onclick="startQuiz('full-sorted')">
+                        <span>All Questions (Sorted)</span>
+                        <span class="question-count" id="fullSortedCount">42 questions</span>
+                    </button>
+                    <button class="quiz-btn" onclick="startQuiz('full-random')">
+                        <span>All Questions (Random)</span>
+                        <span class="question-count" id="fullRandomCount">42 questions</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Quiz Parts (10 Questions Each)</h3>
+                <div class="quiz-options" id="partsContainer">
+                    <!-- Parts will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="quiz-section wrong-questions-section">
+                <h3>Wrong Questions Review</h3>
+                <div class="wrong-info" id="wrongQuestionsInfo">
+                    No wrong questions recorded yet. Take a quiz to see your mistakes here!
+                </div>
+                <div class="quiz-options">
+                    <button class="quiz-btn disabled-btn" id="wrongQuestionsBtn" onclick="startQuiz('wrong-questions')">
+                        <span>Practice Wrong Questions</span>
+                        <span class="question-count" id="wrongQuestionsCount">0 questions</span>
+                    </button>
+                    <button class="quiz-btn disabled-btn" id="wrongExamBtn" onclick="startQuiz('wrong-exam')">
+                        <span>Wrong Questions Exam</span>
+                        <span class="question-count" id="wrongExamCount">0 questions</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE 2 - QUIZ -->
+        <div id="quizPage" class="quiz-page">
+            <div class="controls">
+                <button class="back-btn" onclick="goHome()">← Back to Home</button>
+                <div class="question-info" id="questionInfo">Question 1 of 42</div>
+            </div>
+            
+            <div class="quiz-content">
+                <div class="question-header">
+                    <div class="question-number" id="questionNumber">Question 1</div>
+                    <div id="quizModeInfo"></div>
+                </div>
+                
+                <div class="question-text" id="questionText"></div>
+                
+                <div class="options" id="optionsContainer"></div>
+                
+                <div id="completionMessage" class="completion-message" style="display: none;">
+                    <h3>Quiz Completed!</h3>
+                    <p id="completionText"></p>
+                </div>
+                
+                <div class="navigation">
+                    <button class="nav-btn" id="nextBtn">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Embedded quiz data
+        const quizData = [
+            {
+                "question_number": 1,
+                "question_text": "The primary reason for venting an engine oil tank is to:",
+                "options": {
+                    "A": "prevent overflow.",
+                    "B": "cool the oil.",
+                    "C": "allow for expansion of hot oil.",
+                    "D": "prevent excessive pressure in the tank."
+                },
+                "correct_answer": "D"
+            },
+            {
+                "question_number": 2,
+                "question_text": "An accumulator in a hydraulic system will ..",
+                "options": {
+                    "A": "store fluid under pressure.",
+                    "B": "increase pressure surges within the system.",
+                    "C": "reduce fluid temperature only.",
+                    "D": "reduce fluid temperature and pressure."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 3,
+                "question_text": "The so-called \"hot buses\" or \"direct buses\" are:",
+                "options": {
+                    "A": "providing an alternative current.",
+                    "B": "automatically connected to the battery if generators have failed.",
+                    "C": "directly connected to the battery.",
+                    "D": "kept in operating conditions by an electrical resistance in the case of energy failure."
+                },
+                "correct_answer": "C"
+            },
+            {
+                "question_number": 4,
+                "question_text": "Which part of the fuselage carries loads imposed by pressurization?",
+                "options": {
+                    "A": "Skin.",
+                    "B": "Stringers",
+                    "C": "Ribs.",
+                    "D": "Spars."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 5,
+                "question_text": "The Ram Air Turbine (RAT) provides emergency hydraulic power for:",
+                "options": {
+                    "A": "nose wheel steering after the aeroplane has landed.",
+                    "B": "undercarriage selection and automatic brake system.",
+                    "C": "flap extension only.",
+                    "D": "flight controls in the event of loss of engine driven hydraulic power."
+                },
+                "correct_answer": "D"
+            },
+            {
+                "question_number": 6,
+                "question_text": "Hydraulic fluid in the reservoir is pressurised to..",
+                "options": {
+                    "A": "prevent vapour locking.",
+                    "B": "prevent cavitation in the pump.",
+                    "C": "prevent overheating of the pump.",
+                    "D": "ensure sufficient pump output."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 7,
+                "question_text": "On most transport aircraft, flight deck windows are protected against icing by:",
+                "options": {
+                    "A": "rain repellent systems.",
+                    "B": "anti-icing fluid.",
+                    "C": "vinyl coating.",
+                    "D": "electrical heating."
+                },
+                "correct_answer": "D"
+            },
+            {
+                "question_number": 8,
+                "question_text": "The APU of a large passenger jet airliner has its own AC generator that..",
+                "options": {
+                    "A": "is driven at constant speed through a constant speed drive (CSD), in the same way as the main AC generator.",
+                    "B": "must have the same characteristics as the main AC generator so that it can be easily coupled with the latter.",
+                    "C": "is excited by its Generator Control Unit (GCU) as soon as the APU starts up.",
+                    "D": "supplies the aircraft with three-phase 115 V, 400 Hz AC."
+                },
+                "correct_answer": "D"
+            },
+            {
+                "question_number": 9,
+                "question_text": "Modern pressurised transport aeroplanes are equipped with:",
+                "options": {
+                    "A": "only one oxygen system supplying the whole aeroplane.",
+                    "B": "two oxygen systems both supplying the cockpit and the cabin.",
+                    "C": "two independent oxygen systems, one supplying the cockpit, the other the cabin.",
+                    "D": "only portable oxygen bottles."
+                },
+                "correct_answer": "C"
+            },
+            {
+                "question_number": 10,
+                "question_text": "The wing anti-ice system protects the..",
+                "options": {
+                    "A": "whole of the leading edge and the whole lower wing surface.",
+                    "B": "leading edge and the slats, either partially or completely.",
+                    "C": "whole of the leading edge except the slats because they cannot be anti-iced when extended.",
+                    "D": "the whole upper wing surface and the flaps."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 11,
+                "question_text": "What is the primary purpose of aircraft navigation lights?",
+                "options": {
+                    "A": "To illuminate the runway during landing.",
+                    "B": "To indicate the aircraft's position and direction to other aircraft.",
+                    "C": "To provide cabin lighting during night flights.",
+                    "D": "To signal emergency situations to ground control."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 12,
+                "question_text": "The function of a transponder in aircraft is to:",
+                "options": {
+                    "A": "communicate with air traffic control via voice.",
+                    "B": "automatically respond to radar interrogation with aircraft identification.",
+                    "C": "navigate using GPS signals.",
+                    "D": "control the aircraft's autopilot system."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 13,
+                "question_text": "In a turbine engine, the compressor section:",
+                "options": {
+                    "A": "burns the fuel-air mixture.",
+                    "B": "increases the pressure of incoming air.",
+                    "C": "expands hot gases to produce thrust.",
+                    "D": "controls the fuel flow to the combustion chamber."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 14,
+                "question_text": "The primary flight controls of an aircraft include:",
+                "options": {
+                    "A": "ailerons, elevator, and rudder only.",
+                    "B": "flaps, slats, and spoilers only.",
+                    "C": "ailerons, elevator, rudder, and trim tabs.",
+                    "D": "landing gear, brakes, and steering systems."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 15,
+                "question_text": "The pitot-static system measures:",
+                "options": {
+                    "A": "engine RPM and temperature.",
+                    "B": "airspeed, altitude, and vertical speed.",
+                    "C": "heading and navigation information.",
+                    "D": "fuel quantity and flow rate."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 16,
+                "question_text": "An aircraft's center of gravity affects:",
+                "options": {
+                    "A": "only the aircraft's weight.",
+                    "B": "stability and control characteristics.",
+                    "C": "engine performance only.",
+                    "D": "radio communication range."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 17,
+                "question_text": "The purpose of wing flaps is to:",
+                "options": {
+                    "A": "increase lift and drag at lower speeds.",
+                    "B": "reduce weight during flight.",
+                    "C": "improve fuel efficiency at cruise.",
+                    "D": "control roll movements."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 18,
+                "question_text": "In aircraft electrical systems, the ground power unit (GPU) is used to:",
+                "options": {
+                    "A": "charge the aircraft's batteries during flight.",
+                    "B": "provide electrical power when engines are not running.",
+                    "C": "control the aircraft's navigation systems.",
+                    "D": "operate the landing gear hydraulics."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 19,
+                "question_text": "The stall speed of an aircraft:",
+                "options": {
+                    "A": "remains constant regardless of aircraft configuration.",
+                    "B": "increases with higher aircraft weight.",
+                    "C": "decreases as altitude increases.",
+                    "D": "is only affected by engine power."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 20,
+                "question_text": "Aircraft fuel systems typically include:",
+                "options": {
+                    "A": "tanks, pumps, filters, and distribution lines.",
+                    "B": "only fuel tanks and manual valves.",
+                    "C": "engines and propellers only.",
+                    "D": "hydraulic pumps and accumulators."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 21,
+                "question_text": "The purpose of an aircraft's trim system is to:",
+                "options": {
+                    "A": "increase engine power output.",
+                    "B": "reduce pilot workload by balancing control forces.",
+                    "C": "control the aircraft's navigation systems.",
+                    "D": "adjust cabin pressure automatically."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 22,
+                "question_text": "In pressurized aircraft, the cabin altitude is:",
+                "options": {
+                    "A": "always equal to the actual flight altitude.",
+                    "B": "maintained lower than the actual flight altitude.",
+                    "C": "maintained higher than the actual flight altitude.",
+                    "D": "not related to the flight altitude."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 23,
+                "question_text": "The primary purpose of aircraft anti-ice systems is to:",
+                "options": {
+                    "A": "cool the engines during flight.",
+                    "B": "prevent ice formation on critical surfaces.",
+                    "C": "reduce cabin temperature.",
+                    "D": "improve fuel efficiency."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 24,
+                "question_text": "Aircraft warning systems typically include:",
+                "options": {
+                    "A": "visual and audible alerts for various aircraft conditions.",
+                    "B": "only engine temperature indicators.",
+                    "C": "navigation equipment only.",
+                    "D": "communication radios only."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 25,
+                "question_text": "The function of aircraft spoilers is to:",
+                "options": {
+                    "A": "increase lift during takeoff.",
+                    "B": "reduce lift and increase drag.",
+                    "C": "control engine power output.",
+                    "D": "adjust cabin pressure."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 26,
+                "question_text": "In aircraft hydraulic systems, accumulators serve to:",
+                "options": {
+                    "A": "filter hydraulic fluid.",
+                    "B": "store pressurized fluid for peak demands.",
+                    "C": "cool the hydraulic fluid.",
+                    "D": "measure fluid temperature."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 27,
+                "question_text": "The purpose of aircraft fire detection systems is to:",
+                "options": {
+                    "A": "extinguish fires automatically.",
+                    "B": "alert crew to fire conditions in critical areas.",
+                    "C": "prevent fires from starting.",
+                    "D": "monitor cabin temperature only."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 28,
+                "question_text": "Aircraft landing gear systems typically include:",
+                "options": {
+                    "A": "wheels, brakes, shock struts, and retraction mechanisms.",
+                    "B": "only wheels and tires.",
+                    "C": "engines and propellers.",
+                    "D": "navigation and communication equipment."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 29,
+                "question_text": "The primary purpose of aircraft environmental control systems is to:",
+                "options": {
+                    "A": "control engine performance.",
+                    "B": "maintain comfortable cabin conditions.",
+                    "C": "navigate the aircraft.",
+                    "D": "communicate with ground control."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 30,
+                "question_text": "Aircraft autopilot systems:",
+                "options": {
+                    "A": "can only control heading.",
+                    "B": "can control multiple flight parameters automatically.",
+                    "C": "only work during cruise flight.",
+                    "D": "are not connected to navigation systems."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 31,
+                "question_text": "The purpose of aircraft de-icing systems is to:",
+                "options": {
+                    "A": "prevent ice formation before it occurs.",
+                    "B": "remove ice after it has formed.",
+                    "C": "monitor ice conditions only.",
+                    "D": "cool aircraft surfaces."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 32,
+                "question_text": "Aircraft emergency equipment typically includes:",
+                "options": {
+                    "A": "life vests, oxygen masks, and emergency exits.",
+                    "B": "only fire extinguishers.",
+                    "C": "navigation equipment only.",
+                    "D": "entertainment systems."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 33,
+                "question_text": "The function of aircraft weather radar is to:",
+                "options": {
+                    "A": "navigate using ground-based beacons.",
+                    "B": "detect weather conditions ahead of the aircraft.",
+                    "C": "communicate with other aircraft.",
+                    "D": "control engine parameters."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 34,
+                "question_text": "Aircraft instrument lighting systems:",
+                "options": {
+                    "A": "are only needed during day flights.",
+                    "B": "provide illumination for instrument panels during low-light conditions.",
+                    "C": "only illuminate external navigation lights.",
+                    "D": "are connected to the autopilot system."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 35,
+                "question_text": "The primary purpose of aircraft circuit breakers is to:",
+                "options": {
+                    "A": "increase electrical current.",
+                    "B": "protect electrical circuits from overload.",
+                    "C": "convert AC to DC power.",
+                    "D": "store electrical energy."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 36,
+                "question_text": "Aircraft vacuum systems are primarily used for:",
+                "options": {
+                    "A": "powering certain flight instruments.",
+                    "B": "cleaning the cabin.",
+                    "C": "fuel transfer operations.",
+                    "D": "engine cooling."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 37,
+                "question_text": "The function of aircraft thrust reversers is to:",
+                "options": {
+                    "A": "increase forward thrust.",
+                    "B": "redirect engine thrust to help slow the aircraft.",
+                    "C": "improve fuel efficiency.",
+                    "D": "reduce engine noise."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 38,
+                "question_text": "Aircraft pneumatic systems typically provide power for:",
+                "options": {
+                    "A": "electrical generation only.",
+                    "B": "air conditioning, anti-ice, and some flight controls.",
+                    "C": "fuel pumps only.",
+                    "D": "navigation systems only."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 39,
+                "question_text": "The purpose of aircraft auxiliary power units (APUs) is to:",
+                "options": {
+                    "A": "provide primary propulsion.",
+                    "B": "provide electrical power and compressed air when main engines are not running.",
+                    "C": "control flight surfaces.",
+                    "D": "navigate the aircraft."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 40,
+                "question_text": "Aircraft maintenance records are important for:",
+                "options": {
+                    "A": "tracking aircraft performance and ensuring airworthiness.",
+                    "B": "passenger entertainment only.",
+                    "C": "fuel efficiency calculations only.",
+                    "D": "navigation planning only."
+                },
+                "correct_answer": "A"
+            },
+            {
+                "question_number": 41,
+                "question_text": "The primary purpose of aircraft weight and balance calculations is to:",
+                "options": {
+                    "A": "determine fuel requirements only.",
+                    "B": "ensure safe flight characteristics and performance.",
+                    "C": "calculate ticket prices.",
+                    "D": "determine maintenance schedules."
+                },
+                "correct_answer": "B"
+            },
+            {
+                "question_number": 42,
+                "question_text": "Aircraft certification ensures that:",
+                "options": {
+                    "A": "the aircraft meets established safety and performance standards.",
+                    "B": "the aircraft is the most fuel-efficient model.",
+                    "C": "the aircraft has the latest entertainment systems.",
+                    "D": "the aircraft can fly to any destination."
+                },
+                "correct_answer": "A"
+            }
+        ];
+
+        // Quiz state variables
+        let currentQuizMode = '';
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let wrongQuestions = new Set();
+        let correctedQuestions = new Set();
+
+        // DOM elements
+        const homePage = document.getElementById('homePage');
+        const quizPage = document.getElementById('quizPage');
+        const questionText = document.getElementById('questionText');
+        const optionsContainer = document.getElementById('optionsContainer');
+        const questionNumber = document.getElementById('questionNumber');
+        const questionInfo = document.getElementById('questionInfo');
+        const quizModeInfo = document.getElementById('quizModeInfo');
+        const nextBtn = document.getElementById('nextBtn');
+        const completionMessage = document.getElementById('completionMessage');
+        const completionText = document.getElementById('completionText');
+
+        // Initialize the application
+        function initApp() {
+            loadWrongQuestions();
+            generateQuizParts();
+            updateWrongQuestionsSection();
+        }
+
+        // Load wrong questions from localStorage (cookies)
+        function loadWrongQuestions() {
+            const stored = localStorage.getItem('aviationQuizWrongQuestions');
+            if (stored) {
+                wrongQuestions = new Set(JSON.parse(stored));
+            }
+            
+            const corrected = localStorage.getItem('aviationQuizCorrectedQuestions');
+            if (corrected) {
+                correctedQuestions = new Set(JSON.parse(corrected));
+            }
+        }
+
+        // Save wrong questions to localStorage
+        function saveWrongQuestions() {
+            localStorage.setItem('aviationQuizWrongQuestions', JSON.stringify([...wrongQuestions]));
+            localStorage.setItem('aviationQuizCorrectedQuestions', JSON.stringify([...correctedQuestions]));
+        }
+
+        // Generate quiz parts (10 questions each)
+        function generateQuizParts() {
+            const partsContainer = document.getElementById('partsContainer');
+            const totalQuestions = quizData.length;
+            const questionsPerPart = 10;
+            const totalParts = Math.ceil(totalQuestions / questionsPerPart);
+
+            for (let i = 0; i < totalParts; i++) {
+                const startQuestion = i * questionsPerPart + 1;
+                const endQuestion = Math.min((i + 1) * questionsPerPart, totalQuestions);
+                const questionsInPart = endQuestion - startQuestion + 1;
+
+                const button = document.createElement('button');
+                button.className = 'quiz-btn';
+                button.onclick = () => startQuiz(`part-${i + 1}`);
+                button.innerHTML = `
+                    <span>Part ${i + 1} (Questions ${startQuestion}-${endQuestion})</span>
+                    <span class="question-count">${questionsInPart} questions</span>
+                `;
+                partsContainer.appendChild(button);
+            }
+        }
+
+        // Update wrong questions section
+        function updateWrongQuestionsSection() {
+            const wrongQuestionsInfo = document.getElementById('wrongQuestionsInfo');
+            const wrongQuestionsBtn = document.getElementById('wrongQuestionsBtn');
+            const wrongExamBtn = document.getElementById('wrongExamBtn');
+            const wrongQuestionsCount = document.getElementById('wrongQuestionsCount');
+            const wrongExamCount = document.getElementById('wrongExamCount');
+
+            const wrongCount = wrongQuestions.size;
+            const correctedCount = correctedQuestions.size;
+            const remainingWrong = wrongCount - correctedCount;
+
+            if (wrongCount === 0) {
+                wrongQuestionsInfo.textContent = "No wrong questions recorded yet. Take a quiz to see your mistakes here!";
+                wrongQuestionsBtn.classList.add('disabled-btn');
+                wrongExamBtn.classList.add('disabled-btn');
+                wrongQuestionsCount.textContent = "0 questions";
+                wrongExamCount.textContent = "0 questions";
+            } else {
+                wrongQuestionsInfo.innerHTML = `
+                    You have answered ${wrongCount} questions incorrectly.<br>
+                    ${correctedCount} have been corrected in practice.<br>
+                    ${remainingWrong} questions still need attention.
+                `;
+                wrongQuestionsBtn.classList.remove('disabled-btn');
+                wrongExamBtn.classList.remove('disabled-btn');
+                wrongQuestionsCount.textContent = `${wrongCount} questions`;
+                wrongExamCount.textContent = `${remainingWrong} questions`;
+            }
+        }
+
+        // Start quiz based on mode
+        function startQuiz(mode) {
+            currentQuizMode = mode;
+            currentQuestionIndex = 0;
+            
+            // Prepare questions based on mode
+            if (mode === 'full-sorted') {
+                currentQuestions = [...quizData];
+                quizModeInfo.textContent = 'All Questions (Sorted Order)';
+            } else if (mode === 'full-random') {
+                currentQuestions = shuffleArray([...quizData]);
+                quizModeInfo.textContent = 'All Questions (Random Order)';
+            } else if (mode.startsWith('part-')) {
+                const partNumber = parseInt(mode.split('-')[1]);
+                const startIndex = (partNumber - 1) * 10;
+                const endIndex = Math.min(startIndex + 10, quizData.length);
+                currentQuestions = quizData.slice(startIndex, endIndex);
+                quizModeInfo.textContent = `Part ${partNumber}`;
+            } else if (mode === 'wrong-questions') {
+                currentQuestions = quizData.filter(q => wrongQuestions.has(q.question_number));
+                currentQuestions = shuffleArray(currentQuestions);
+                quizModeInfo.textContent = 'Wrong Questions Practice';
+            } else if (mode === 'wrong-exam') {
+                const uncorrectedWrong = [...wrongQuestions].filter(qNum => !correctedQuestions.has(qNum));
+                currentQuestions = quizData.filter(q => uncorrectedWrong.includes(q.question_number));
+                currentQuestions = shuffleArray(currentQuestions);
+                quizModeInfo.textContent = 'Wrong Questions Exam';
+            }
+
+            // Switch to quiz page
+            homePage.style.display = 'none';
+            quizPage.style.display = 'block';
+            
+            displayQuestion();
+        }
+
+        // Shuffle array function
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        // Display current question
+        function displayQuestion() {
+            if (currentQuestionIndex >= currentQuestions.length) {
+                showCompletion();
+                return;
+            }
+
+            const question = currentQuestions[currentQuestionIndex];
+            const displayNumber = currentQuestionIndex + 1;
+            const totalQuestions = currentQuestions.length;
+            
+            // Update question display
+            questionText.textContent = question.question_text;
+            questionNumber.textContent = `Question ${displayNumber}`;
+            questionInfo.textContent = `Question ${displayNumber} of ${totalQuestions}`;
+            
+            // Clear and populate options
+            optionsContainer.innerHTML = '';
+            completionMessage.style.display = 'none';
+            
+            const options = Object.entries(question.options);
+            options.forEach(([letter, text]) => {
+                const optionElement = createOptionElement(letter, text, question);
+                optionsContainer.appendChild(optionElement);
+            });
+
+            // Update next button
+            updateNextButton();
+        }
+
+        // Create option element
+        function createOptionElement(letter, text, question) {
+            const optionDiv = document.createElement('div');
+            optionDiv.className = 'option';
+            optionDiv.setAttribute('data-option', letter);
+            
+            optionDiv.innerHTML = `
+                <div class="option-letter">${letter}</div>
+                <div class="option-text">${text}</div>
+                <svg class="result-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" fill="currentColor"/>
+                    <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                </svg>
+            `;
+            
+            optionDiv.addEventListener('click', () => selectOption(letter, question));
+            return optionDiv;
+        }
+
+        // Handle option selection
+        function selectOption(selectedLetter, question) {
+            const options = optionsContainer.querySelectorAll('.option');
+            
+            // Disable all options
+            options.forEach(option => {
+                option.style.pointerEvents = 'none';
+            });
+            
+            // Show the result
+            const isCorrect = selectedLetter === question.correct_answer;
+            showAnswer(selectedLetter, question.correct_answer, isCorrect);
+            
+            // Handle wrong/correct tracking
+            if (isCorrect) {
+                // If this was a wrong question exam and user got it right, mark as corrected
+                if (currentQuizMode === 'wrong-exam' && wrongQuestions.has(question.question_number)) {
+                    correctedQuestions.add(question.question_number);
+                    saveWrongQuestions();
+                }
+            } else {
+                // Add to wrong questions if not already there
+                wrongQuestions.add(question.question_number);
+                saveWrongQuestions();
+            }
+            
+            // Update next button
+            updateNextButton();
+            
+            // Auto advance after delay for wrong-exam mode
+            if (currentQuizMode === 'wrong-exam' && isCorrect) {
+                setTimeout(() => {
+                    nextQuestion();
+                }, 1500);
+            }
+        }
+
+        // Show answer result
+        function showAnswer(selectedLetter, correctLetter, isCorrect) {
+            const options = optionsContainer.querySelectorAll('.option');
+            
+            options.forEach(option => {
+                const letter = option.getAttribute('data-option');
+                const resultIcon = option.querySelector('.result-icon');
+                
+                if (letter === correctLetter) {
+                    // Correct answer
+                    option.classList.add('correct', 'answered');
+                    resultIcon.innerHTML = `
+                        <circle cx="12" cy="12" r="10" fill="#27ae60"/>
+                        <path d="M8 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                    `;
+                } else if (letter === selectedLetter) {
+                    // User's incorrect answer
+                    option.classList.add('incorrect', 'answered');
+                    resultIcon.innerHTML = `
+                        <circle cx="12" cy="12" r="10" fill="#e74c3c"/>
+                        <path d="M8 8l8 8M16 8l-8 8" stroke="white" stroke-width="2"/>
+                    `;
+                }
+            });
+        }
+
+        // Update next button
+        function updateNextButton() {
+            const hasAnswered = optionsContainer.querySelector('.answered');
+            const isLastQuestion = currentQuestionIndex >= currentQuestions.length - 1;
+            
+            if (hasAnswered) {
+                nextBtn.style.display = 'block';
+                if (isLastQuestion) {
+                    nextBtn.textContent = 'Finish Quiz';
+                } else {
+                    nextBtn.textContent = 'Next →';
+                }
+            } else {
+                nextBtn.style.display = 'none';
+            }
+        }
+
+        // Next question
+        function nextQuestion() {
+            currentQuestionIndex++;
+            displayQuestion();
+        }
+
+        // Show completion message
+        function showCompletion() {
+            completionMessage.style.display = 'block';
+            nextBtn.style.display = 'none';
+            
+            let message = "Quiz completed successfully!";
+            if (currentQuizMode === 'wrong-exam') {
+                message += " Questions answered correctly have been marked as reviewed.";
+            }
+            
+            completionText.textContent = message;
+            
+            // Update wrong questions section for next time
+            updateWrongQuestionsSection();
+        }
+
+        // Go back to home page
+        function goHome() {
+            homePage.style.display = 'block';
+            quizPage.style.display = 'none';
+            updateWrongQuestionsSection();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextQuestion);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (homePage.style.display !== 'none') return; // Only work in quiz mode
+            
+            if (['a', 'A'].includes(e.key)) {
+                selectOptionByLetter('A');
+            } else if (['b', 'B'].includes(e.key)) {
+                selectOptionByLetter('B');
+            } else if (['c', 'C'].includes(e.key)) {
+                selectOptionByLetter('C');
+            } else if (['d', 'D'].includes(e.key)) {
+                selectOptionByLetter('D');
+            } else if (e.key === 'Enter' && nextBtn.style.display !== 'none') {
+                nextQuestion();
+            }
+        });
+
+        // Select option by letter (for keyboard input)
+        function selectOptionByLetter(letter) {
+            const optionElement = optionsContainer.querySelector(`[data-option="${letter}"]`);
+            if (optionElement && optionElement.style.pointerEvents !== 'none') {
+                optionElement.click();
+            }
+        }
+
+        // Initialize app when page loads
+        initApp();
+    </script>
+</body>
+</html>
