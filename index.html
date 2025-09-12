@@ -97,6 +97,242 @@
             border-left: 5px solid #f39c12;
         }
 
+        /* QUESTION SELECTION STYLES */
+        .question-selection-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .search-section {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .search-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 16px 20px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            font-size: 1.1em;
+            background: white;
+            transition: all 0.3s ease;
+            min-height: 50px;
+        }
+
+        .search-input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        .search-info {
+            color: #6c757d;
+            font-size: 0.9em;
+            white-space: nowrap;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .search-status {
+            font-size: 0.8em;
+            color: #007bff;
+            font-style: italic;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .search-status.searching {
+            opacity: 1;
+        }
+
+        .questions-list-container {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .questions-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .questions-header h4 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+
+        .bulk-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .questions-list {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 0;
+            contain: layout style paint; /* CSS containment for better performance */
+            will-change: scroll-position; /* Optimize for scrolling */
+        }
+
+        .question-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            contain: layout style; /* CSS containment for individual items */
+            transform: translateZ(0); /* Force hardware acceleration */
+        }
+
+        .question-item:hover {
+            background: #f8f9fa;
+        }
+
+        .question-item.selected {
+            background: #e3f2fd;
+            border-left: 4px solid #3498db;
+            padding-left: 11px;
+        }
+
+        .question-checkbox {
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
+        .question-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .question-number {
+            font-weight: bold;
+            color: #3498db;
+            font-size: 0.9em;
+            margin-bottom: 4px;
+        }
+
+        .question-text {
+            color: #2c3e50;
+            line-height: 1.4;
+            word-wrap: break-word;
+        }
+
+        .question-text.highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .selection-summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .selected-count h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 1em;
+        }
+
+        .selected-count span {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .selection-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            background: #f8f9fa;
+            color: #333;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+
+        .action-btn:hover {
+            background: #e9ecef;
+        }
+
+        .action-btn.small {
+            padding: 6px 12px;
+            font-size: 0.8em;
+        }
+
+        .action-btn.primary {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+        }
+
+        .action-btn.primary:hover {
+            background: #2980b9;
+        }
+
+        .action-btn:disabled {
+            background: #ccc;
+            color: #666;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .search-controls {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .questions-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .bulk-actions {
+                justify-content: center;
+            }
+
+            .selection-summary {
+                flex-direction: column;
+                gap: 15px;
+                align-items: stretch;
+            }
+
+            .selection-actions {
+                justify-content: center;
+            }
+        }
+
         .wrong-questions-section h3 {
             color: #856404;
         }
@@ -453,6 +689,43 @@
                 <h3>Quiz Parts (100 Questions Each)</h3>
                 <div class="quiz-options" id="partsContainer">
                     <!-- Parts will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="quiz-section">
+                <h3>Select Questions & Create Custom Exams</h3>
+                <div class="question-selection-container">
+                    <div class="search-section">
+                        <div class="search-controls">
+                            <input type="text" id="questionSearch" class="search-input" placeholder="Search by question number or text..." onkeyup="debouncedFilterQuestions()">
+                            <div class="search-info">
+                                <span id="totalQuestions">Loading...</span> total questions
+                                <span id="searchStatus" class="search-status"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="questions-list-container">
+                        <div class="questions-header">
+                            <h4>Questions:</h4>
+                            <div class="bulk-actions">
+                                <button class="action-btn small" onclick="selectAllVisible()">Select All Visible</button>
+                                <button class="action-btn small" onclick="clearAllVisible()">Clear All Visible</button>
+                            </div>
+                        </div>
+                        <div class="questions-list" id="questionsList">
+                            <!-- Questions will be generated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="selection-summary">
+                        <div class="selected-count">
+                            <h4>Selected Questions:</h4>
+                            <span id="selectedCount">0 questions selected</span>
+                        </div>
+                        <div class="selection-actions">
+                            <button class="action-btn" id="clearSelectionBtn" onclick="clearSelection()">Clear All</button>
+                            <button class="action-btn primary" id="createExamBtn" onclick="createCustomExam()" disabled>Create Custom Exam</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -23212,10 +23485,18 @@
         const startRandomBtn = document.getElementById('startRandomBtn');
         const randomQuestionCount = document.getElementById('randomQuestionCount');
 
+        // Selected questions for custom exam
+        let selectedQuestions = new Set();
+        let allQuestions = []; // Store all questions for search functionality
+        let searchTimeout = null; // For debouncing search
+        let questionElements = []; // Cache DOM elements for performance
+        let searchIndex = {}; // Pre-built search index for faster queries
+
         // Initialize the application
         function initApp() {
             loadWrongQuestions();
             generateQuizParts();
+            generateQuestionsList();
             updateWrongQuestionsSection();
             initRandomQuestions();
             updateQuestionCounts();
@@ -23541,6 +23822,373 @@
         }
 
 
+        // Build search index for fast query lookups
+        function buildSearchIndex() {
+            searchIndex = {
+                byQuestionNumber: {},
+                byRowNumber: {},
+                byText: {},
+                all: new Set() // All searchable items
+            };
+
+            allQuestions.forEach((question, index) => {
+                const questionNum = question.question_number;
+                const rowNum = index + 1;
+                const questionText = question.question_text.toLowerCase();
+
+                // Index by question number
+                if (!searchIndex.byQuestionNumber[questionNum]) {
+                    searchIndex.byQuestionNumber[questionNum] = [];
+                }
+                searchIndex.byQuestionNumber[questionNum].push(index);
+
+                // Index by row number
+                if (!searchIndex.byRowNumber[rowNum]) {
+                    searchIndex.byRowNumber[rowNum] = [];
+                }
+                searchIndex.byRowNumber[rowNum].push(index);
+
+                // Index by text words (split and index individual words)
+                const words = questionText.split(/\s+/);
+                words.forEach(word => {
+                    if (word.length >= 2) { // Only index meaningful words
+                        if (!searchIndex.byText[word]) {
+                            searchIndex.byText[word] = [];
+                        }
+                        if (!searchIndex.byText[word].includes(index)) {
+                            searchIndex.byText[word].push(index);
+                        }
+                    }
+                });
+
+                // Add to all searchable items
+                searchIndex.all.add(index);
+            });
+        }
+
+        // Generate questions list for selection
+        function generateQuestionsList() {
+            const questionsList = document.getElementById('questionsList');
+            const totalQuestionsSpan = document.getElementById('totalQuestions');
+
+            // Store all questions for search functionality
+            allQuestions = [...quizData];
+            questionElements = []; // Reset cache
+            searchIndex = {}; // Reset search index
+
+            // Update total count
+            totalQuestionsSpan.textContent = allQuestions.length;
+
+            // Build search index for faster queries
+            buildSearchIndex();
+
+            // Clear existing list
+            questionsList.innerHTML = '';
+
+            // Generate question items using array indices
+            allQuestions.forEach((question, index) => {
+                const questionItem = document.createElement('div');
+                questionItem.className = 'question-item';
+                questionItem.onclick = () => toggleQuestionSelection(index);
+
+                questionItem.innerHTML = `
+                    <input type="checkbox" class="question-checkbox" id="question-${index}" onchange="handleQuestionCheckboxChange(${index})">
+                    <div class="question-content">
+                        <div class="question-number">Question ${question.question_number} (Row ${index + 1})</div>
+                        <div class="question-text">${question.question_text}</div>
+                    </div>
+                `;
+
+                questionsList.appendChild(questionItem);
+
+                // Cache elements for performance
+                questionElements.push({
+                    element: questionItem,
+                    checkbox: questionItem.querySelector('.question-checkbox'),
+                    questionNumber: questionItem.querySelector('.question-number'),
+                    questionText: questionItem.querySelector('.question-text'),
+                    questionNum: question.question_number,
+                    rowNum: index + 1,
+                    questionTextLower: question.question_text.toLowerCase(),
+                    isHighlighted: false // Track highlighting state
+                });
+            });
+        }
+
+        // Toggle question selection
+        function toggleQuestionSelection(questionIndex) {
+            const checkbox = document.getElementById(`question-${questionIndex}`);
+            const questionItem = checkbox.closest('.question-item');
+
+            if (selectedQuestions.has(questionIndex)) {
+                selectedQuestions.delete(questionIndex);
+                checkbox.checked = false;
+                questionItem.classList.remove('selected');
+            } else {
+                selectedQuestions.add(questionIndex);
+                checkbox.checked = true;
+                questionItem.classList.add('selected');
+            }
+
+            updateSelectedQuestionsDisplay();
+        }
+
+        // Handle checkbox change
+        function handleQuestionCheckboxChange(questionIndex) {
+            const checkbox = document.getElementById(`question-${questionIndex}`);
+            const questionItem = checkbox.closest('.question-item');
+
+            if (checkbox.checked) {
+                selectedQuestions.add(questionIndex);
+                questionItem.classList.add('selected');
+            } else {
+                selectedQuestions.delete(questionIndex);
+                questionItem.classList.remove('selected');
+            }
+
+            updateSelectedQuestionsDisplay();
+        }
+
+        // Advanced debounced search with minimum query length and longer wait
+        function debouncedFilterQuestions() {
+            if (searchTimeout) {
+                clearTimeout(searchTimeout);
+            }
+
+            const searchInput = document.getElementById('questionSearch');
+            const searchTerm = searchInput.value.trim();
+            const searchStatus = document.getElementById('searchStatus');
+
+            // Don't search for very short terms to reduce unnecessary operations
+            if (searchTerm.length > 0 && searchTerm.length < 2) {
+                // Clear results for very short queries
+                clearSearchResults();
+                document.getElementById('totalQuestions').textContent = `${allQuestions.length} total questions`;
+                searchStatus.classList.remove('searching');
+                return;
+            }
+
+            // Show searching status
+            searchStatus.textContent = 'Searching...';
+            searchStatus.classList.add('searching');
+
+            // Longer debounce for better performance (500ms)
+            searchTimeout = setTimeout(() => {
+                // Only search if we have a meaningful query
+                if (searchTerm.length >= 2 || searchTerm === '') {
+                    filterQuestions();
+                } else {
+                    searchStatus.classList.remove('searching');
+                }
+            }, 500); // Increased to 500ms to reduce search frequency
+        }
+
+        // Clear search results for short queries
+        function clearSearchResults() {
+            questionElements.forEach(item => {
+                if (item.element.style.display !== 'flex') {
+                    item.element.style.display = 'flex';
+                }
+                // Remove highlighting
+                if (item.isHighlighted) {
+                    item.questionText.innerHTML = item.questionText.textContent;
+                    item.questionText.classList.remove('highlight');
+                    item.isHighlighted = false;
+                }
+            });
+        }
+
+        // Query-based search using pre-built index for lightning-fast performance
+        function filterQuestions() {
+            const searchInput = document.getElementById('questionSearch');
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const totalQuestionsSpan = document.getElementById('totalQuestions');
+            const searchStatus = document.getElementById('searchStatus');
+
+            let matchingIndices = new Set();
+
+            if (searchTerm === '') {
+                // Show all questions
+                matchingIndices = new Set(searchIndex.all);
+            } else {
+                // Use search index for instant lookups
+                const term = searchTerm;
+
+                // Check exact question number matches
+                if (searchIndex.byQuestionNumber[term]) {
+                    searchIndex.byQuestionNumber[term].forEach(idx => matchingIndices.add(idx));
+                }
+
+                // Check exact row number matches
+                const rowNum = parseInt(term);
+                if (!isNaN(rowNum) && searchIndex.byRowNumber[rowNum]) {
+                    searchIndex.byRowNumber[rowNum].forEach(idx => matchingIndices.add(idx));
+                }
+
+                // Check text matches - use prefix matching for better performance
+                Object.keys(searchIndex.byText).forEach(word => {
+                    if (word.startsWith(term)) {
+                        searchIndex.byText[word].forEach(idx => matchingIndices.add(idx));
+                    }
+                });
+            }
+
+            // Update visibility and highlighting in chunks for smooth performance
+            updateQuestionVisibility(matchingIndices, searchTerm);
+
+            // Update search info
+            if (searchTerm === '') {
+                totalQuestionsSpan.textContent = allQuestions.length;
+                searchStatus.classList.remove('searching');
+            } else {
+                totalQuestionsSpan.textContent = `${matchingIndices.size} of ${allQuestions.length}`;
+                searchStatus.textContent = 'Done';
+                setTimeout(() => {
+                    searchStatus.classList.remove('searching');
+                }, 200);
+            }
+        }
+
+        // Update question visibility using search results
+        function updateQuestionVisibility(matchingIndices, searchTerm) {
+            const chunkSize = 50; // Smaller chunks for better responsiveness
+            let currentIndex = 0;
+
+            function processVisibilityChunk() {
+                const endIndex = Math.min(currentIndex + chunkSize, questionElements.length);
+
+                for (let i = currentIndex; i < endIndex; i++) {
+                    const item = questionElements[i];
+                    const shouldShow = matchingIndices.has(i);
+
+                    // Update visibility
+                    if (shouldShow && item.element.style.display !== 'flex') {
+                        item.element.style.display = 'flex';
+                    } else if (!shouldShow && item.element.style.display !== 'none') {
+                        item.element.style.display = 'none';
+                    }
+
+                    // Update highlighting
+                    if (shouldShow && searchTerm !== '' && !item.isHighlighted) {
+                        highlightSearchTermOptimized(item.questionText, searchTerm, item.questionTextLower);
+                        item.isHighlighted = true;
+                    } else if ((!shouldShow || searchTerm === '') && item.isHighlighted) {
+                        item.questionText.innerHTML = item.questionText.textContent;
+                        item.questionText.classList.remove('highlight');
+                        item.isHighlighted = false;
+                    }
+                }
+
+                currentIndex = endIndex;
+
+                // Continue processing if there are more items
+                if (currentIndex < questionElements.length) {
+                    requestAnimationFrame(processVisibilityChunk);
+                }
+            }
+
+            // Start processing
+            processVisibilityChunk();
+        }
+
+        // Optimized highlight search term in text
+        function highlightSearchTermOptimized(element, searchTerm, textLower) {
+            if (!searchTerm) {
+                element.innerHTML = element.textContent;
+                return;
+            }
+
+            const text = element.textContent;
+            const index = textLower.indexOf(searchTerm);
+
+            if (index === -1) {
+                element.innerHTML = text;
+                return;
+            }
+
+            // Create highlighted HTML more efficiently
+            const beforeMatch = text.substring(0, index);
+            const match = text.substring(index, index + searchTerm.length);
+            const afterMatch = text.substring(index + searchTerm.length);
+
+            element.innerHTML = `${beforeMatch}<span class="highlight">${match}</span>${afterMatch}`;
+        }
+
+        // Select all visible questions (optimized)
+        function selectAllVisible() {
+            // Use cached elements for better performance
+            questionElements.forEach(item => {
+                if (item.element.style.display !== 'none') {
+                    const questionIndex = item.rowNum - 1; // rowNum is 1-based, index is 0-based
+                    if (!selectedQuestions.has(questionIndex)) {
+                        selectedQuestions.add(questionIndex);
+                        item.checkbox.checked = true;
+                        item.element.classList.add('selected');
+                    }
+                }
+            });
+
+            updateSelectedQuestionsDisplay();
+        }
+
+        // Clear all visible selections (optimized)
+        function clearAllVisible() {
+            // Use cached elements for better performance
+            questionElements.forEach(item => {
+                if (item.element.style.display !== 'none') {
+                    const questionIndex = item.rowNum - 1; // rowNum is 1-based, index is 0-based
+                    if (selectedQuestions.has(questionIndex)) {
+                        selectedQuestions.delete(questionIndex);
+                        item.checkbox.checked = false;
+                        item.element.classList.remove('selected');
+                    }
+                }
+            });
+
+            updateSelectedQuestionsDisplay();
+        }
+
+        // Update the selected questions display
+        function updateSelectedQuestionsDisplay() {
+            const selectedCountSpan = document.getElementById('selectedCount');
+            const createExamBtn = document.getElementById('createExamBtn');
+
+            selectedCountSpan.textContent = `${selectedQuestions.size} questions selected`;
+
+            createExamBtn.disabled = selectedQuestions.size === 0;
+        }
+
+        // Clear all selections (optimized)
+        function clearSelection() {
+            selectedQuestions.clear();
+
+            // Reset all checkboxes and visual states using cached elements
+            questionElements.forEach(item => {
+                item.checkbox.checked = false;
+                item.element.classList.remove('selected');
+            });
+
+            updateSelectedQuestionsDisplay();
+        }
+
+        // Create custom exam from selected questions
+        function createCustomExam() {
+            if (selectedQuestions.size === 0) return;
+
+            // Get selected questions from quizData using array indices
+            currentQuestions = Array.from(selectedQuestions).map(index => quizData[index]);
+
+            // Set current questions for the quiz
+            currentQuizMode = 'custom-exam';
+            quizModeInfo.textContent = `Custom Exam (${currentQuestions.length} questions)`;
+
+            // Switch to quiz page
+            homePage.style.display = 'none';
+            quizPage.style.display = 'block';
+
+            displayQuestion();
+        }
+
         // Generate quiz parts (100 questions each)
         function generateQuizParts() {
             const partsContainer = document.getElementById('partsContainer');
@@ -23627,6 +24275,9 @@
                 currentQuestions = quizData.filter(q => uncorrectedWrong.includes(q.question_number));
                 currentQuestions = shuffleArray(currentQuestions);
                 quizModeInfo.textContent = 'Wrong Questions Exam';
+            } else if (mode === 'custom-exam') {
+                // currentQuestions is already set by createCustomExam()
+                quizModeInfo.textContent = `Custom Exam (${currentQuestions.length} questions)`;
             }
 
             // Switch to quiz page
