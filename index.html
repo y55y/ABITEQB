@@ -92,6 +92,17 @@
             font-size: 0.9em;
         }
 
+        .clear-wrong-btn {
+            background: #e74c3c;
+            margin-top: 10px;
+        }
+
+        .clear-wrong-btn:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
         .wrong-questions-section {
             background: #fff3cd;
             border-left: 5px solid #f39c12;
@@ -536,6 +547,35 @@
             margin-bottom: 10px;
         }
 
+        .completion-message p {
+            white-space: pre-line;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .completion-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .repeat-btn {
+            background: #3498db;
+        }
+
+        .repeat-btn:hover {
+            background: #2980b9;
+        }
+
+        .home-btn {
+            background: #95a5a6;
+        }
+
+        .home-btn:hover {
+            background: #7f8c8d;
+        }
+
         /* RANDOM QUESTIONS SECTION STYLES */
         .random-questions-container {
             display: flex;
@@ -743,6 +783,9 @@
                         <span>Wrong Questions Exam</span>
                         <span class="question-count" id="wrongExamCount">0 questions</span>
                     </button>
+                    <button class="quiz-btn clear-wrong-btn" id="clearWrongBtn" onclick="clearAllWrongQuestions()">
+                        <span>Clear All Wrong Questions</span>
+                    </button>
                 </div>
             </div>
 
@@ -768,6 +811,10 @@
                 <div id="completionMessage" class="completion-message" style="display: none;">
                     <h3>Quiz Completed!</h3>
                     <p id="completionText"></p>
+                    <div class="completion-buttons">
+                        <button class="quiz-btn repeat-btn" onclick="repeatQuiz()">Repeat Quiz</button>
+                        <button class="quiz-btn home-btn" onclick="goHome()">Back to Home</button>
+                    </div>
                 </div>
                 
                 <div class="navigation">
@@ -23465,6 +23512,7 @@
         let currentQuestionIndex = 0;
         let wrongQuestions = new Set();
         let correctedQuestions = new Set();
+        let quizScore = { correct: 0, total: 0 };
 
         // DOM elements
         const homePage = document.getElementById('homePage');
@@ -24247,6 +24295,7 @@
         function startQuiz(mode) {
             currentQuizMode = mode;
             currentQuestionIndex = 0;
+            quizScore = { correct: 0, total: 0 };
 
             // Prepare questions based on mode
             if (mode === 'full-sorted') {
@@ -24318,7 +24367,9 @@
             completionMessage.style.display = 'none';
             
             const options = Object.entries(question.options);
-            options.forEach(([letter, text]) => {
+            // Shuffle the options to randomize their order
+            const shuffledOptions = shuffleArray(options);
+            shuffledOptions.forEach(([letter, text]) => {
                 const optionElement = createOptionElement(letter, text, question);
                 optionsContainer.appendChild(optionElement);
             });
@@ -24358,7 +24409,13 @@
             // Show the result
             const isCorrect = selectedLetter === question.correct_answer;
             showAnswer(selectedLetter, question.correct_answer, isCorrect);
-            
+
+            // Track quiz score
+            quizScore.total++;
+            if (isCorrect) {
+                quizScore.correct++;
+            }
+
             // Handle wrong/correct tracking
             if (isCorrect) {
                 // If this was a wrong question exam and user got it right, mark as corrected
@@ -24432,18 +24489,36 @@
             displayQuestion();
         }
 
+        // Calculate grade based on score
+        function calculateGrade(correct, total) {
+            if (total === 0) return { grade: 'N/A', percentage: 0 };
+
+            const percentage = Math.round((correct / total) * 100);
+
+            let grade = 'F';
+            if (percentage >= 90) grade = 'A';
+            else if (percentage >= 80) grade = 'B';
+            else if (percentage >= 70) grade = 'C';
+            else if (percentage >= 60) grade = 'D';
+
+            return { grade, percentage };
+        }
+
         // Show completion message
         function showCompletion() {
             completionMessage.style.display = 'block';
             nextBtn.style.display = 'none';
-            
-            let message = "Quiz completed successfully!";
+
+            const { grade, percentage } = calculateGrade(quizScore.correct, quizScore.total);
+
+            let message = `Quiz completed successfully!\n\nScore: ${quizScore.correct}/${quizScore.total} (${percentage}%)\nGrade: ${grade}`;
+
             if (currentQuizMode === 'wrong-exam') {
-                message += " Questions answered correctly have been marked as reviewed.";
+                message += "\n\nQuestions answered correctly have been marked as reviewed.";
             }
-            
+
             completionText.textContent = message;
-            
+
             // Update wrong questions section for next time
             updateWrongQuestionsSection();
         }
@@ -24453,6 +24528,42 @@
             homePage.style.display = 'block';
             quizPage.style.display = 'none';
             updateWrongQuestionsSection();
+        }
+
+        // Repeat the current quiz
+        function repeatQuiz() {
+            // Reset quiz state
+            currentQuestionIndex = -1;
+            quizScore = { correct: 0, total: 0 };
+            completionMessage.style.display = 'none';
+
+            // Reset all answer states
+            const options = document.querySelectorAll('.option');
+            options.forEach(option => {
+                option.classList.remove('correct', 'wrong', 'answered');
+                option.style.pointerEvents = 'auto';
+            });
+
+            // Start the quiz again with the same questions
+            nextQuestion();
+        }
+
+        // Clear all wrong questions
+        function clearAllWrongQuestions() {
+            if (confirm('Are you sure you want to clear all wrong questions? This action cannot be undone.')) {
+                // Clear both wrong questions and corrected questions
+                wrongQuestions.clear();
+                correctedQuestions.clear();
+
+                // Save the cleared state
+                saveWrongQuestions();
+
+                // Update the UI
+                updateWrongQuestionsSection();
+
+                // Show confirmation message
+                alert('All wrong questions have been cleared.');
+            }
         }
 
         // Event listeners
