@@ -1,0 +1,1894 @@
+[
+  {
+    "question_number": 14,
+    "question": "The fuselage structure of a modern pressurised transport aeroplane is an example of a..",
+    "options": {
+      "A": "semi-truss structure.",
+      "B": "semi -monocoque structure.",
+      "C": "truss structure.",
+      "D": "pure monocoque structure."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 21,
+    "question": "The fan in a high by -pass ratio turbo -jet engine produces:",
+    "options": {
+      "A": "the least part of the thrust.",
+      "B": "the greatest part of the thrust.",
+      "C": "half the thrust.",
+      "D": "none of the thrust."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 25,
+    "question": "The reason for using inverters in an electrical system is:",
+    "options": {
+      "A": "to change AC into DC.",
+      "B": "to avoid a short circuit.",
+      "C": "to change the DC voltage.",
+      "D": "to change DC into AC."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 27,
+    "question": "The pilot`s control input in a Fly -By-Wire system is..",
+    "options": {
+      "A": "linked by mechanical cables directly to the flight control surface.",
+      "B": "converted into an electrical signal and linked via a computer to the flight control surface.",
+      "C": "linked mechanically to a computer and th en to the flight control surface.",
+      "D": "linked by electrical wires directly to the flight control surface."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 29,
+    "question": "In flight, the cabin air for large jet transport aeroplanes is usually supplied by ..",
+    "options": {
+      "A": "single radial compressors.",
+      "B": "engine compressors.",
+      "C": "ram air intakes.",
+      "D": "piston compressors."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 31,
+    "question": "A cabin pressure controller maintains a pre -set cabin altitude by regulating the..",
+    "options": {
+      "A": "position of the duct relief valve/valves.",
+      "B": "position of the inward relief valve.",
+      "C": "mass air flow into the cabin.",
+      "D": "position of the outflow valve/valves."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 33,
+    "question": "EPR can be defined as the ratio of:",
+    "options": {
+      "A": "the total turbine outlet pressure to the total compressor outlet pressure.",
+      "B": "the total turbine inlet pressure to the total compressor inlet pressure.",
+      "C": "the total turbine outlet pressure to t he total compressor inlet pressure.",
+      "D": "the total turbine inlet pressure to the total compressor outlet pressure."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 35,
+    "question": "In jet aircraft equipped with a thermal anti -ice system, this is primarily supplied by..",
+    "options": {
+      "A": "mechanical anti -icing boots.",
+      "B": "electrically heating the surfaces to be protected.",
+      "C": "ram air, heated via a heat exchanger.",
+      "D": "bleed air from the engines."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 36,
+    "question": "When large transport aeroplanes are flying at high speed, full rudder deflection would cause excessive loads on the structure. What system is fitted to the rudder to prevent this happening?",
+    "options": {
+      "A": "Rudder trim system.",
+      "B": "Fully powered rudder control.",
+      "C": "Rudder ratio or rudder travel chang er.",
+      "D": "Yaw damper system."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 40,
+    "question": "A bus bar is:",
+    "options": {
+      "A": "the stator of a moving coil instrument.",
+      "B": "a distribution means for electrical power.",
+      "C": "a device which may only be used in DC circuits.",
+      "D": "a device permitting operation of two or more sw itches together."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 44,
+    "question": "The most widely used AC frequency in aircraft is:",
+    "options": {
+      "A": "115 Hz.",
+      "B": "50 Hz.",
+      "C": "60 Hz.",
+      "D": "400 Hz."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 48,
+    "question": "The input and output of a static inverter are respectively:",
+    "options": {
+      "A": "AC and AC.",
+      "B": "AC and DC.",
+      "C": "DC and DC.",
+      "D": "DC and AC."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 66,
+    "question": "In a commercial transport aeroplane the landing gear normal operating system is usually..",
+    "options": {
+      "A": "mechanically operated.",
+      "B": "pneumatically operated.",
+      "C": "electrically operated.",
+      "D": "hydraulically operated."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 69,
+    "question": "Alternating current can be derived from direct current by..",
+    "options": {
+      "A": "a transformer.",
+      "B": "a rectifier.",
+      "C": "an inverter.",
+      "D": "an alternating current motor."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 83,
+    "question": "Primary flight controls are ..",
+    "options": {
+      "A": "ailerons, elevators and rudder.",
+      "B": "ailerons, elevators, rudde r and flaps.",
+      "C": "control wheel or stick, rudder pedals, flap lever and throttle.",
+      "D": "control wheel or stick, rudder pedals and speed brake."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 113,
+    "question": "What is the main purpose of a hydraulic system in an aircraft?",
+    "options": {
+      "A": "To move large control surfaces.",
+      "B": "To warm up the fuel and cool down integrated drive generators (IDGs).",
+      "C": "To damp out movement while landing and taxiing.",
+      "D": "Use for lubrication."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 118,
+    "question": "Holding procedure – The outbound time for a holding pattern above 14000 ft in still air conditions is",
+    "options": {
+      "A": "1 minute.",
+      "B": "2 minutes 30 seconds.",
+      "C": "1 minute 30 seconds.",
+      "D": "2 minutes."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 119,
+    "question": "The vertical separation minimum between opposite direction aircraft flying under IFR below flight level 290 is..",
+    "options": {
+      "A": "2000 feet (600 m).",
+      "B": "500 feet (150 m).",
+      "C": "1000 feet (300 m).",
+      "D": "1500 feet (450 m)."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 123,
+    "question": "Regarding runway characteristics, the clearway is..",
+    "options": {
+      "A": "trapezoidal, and the inner width is twice that of the outer width.",
+      "B": "semi-circular, with a radius twice that of the runway width.",
+      "C": "rectangular, and it is located on the ground or on water.",
+      "D": "conical, with a total length at least half that of the TORA."
+    }
+  },
+  {
+    "question_number": 125,
+    "question": "Ceiling is the height above the ground or water of the base of the lowest layer of cloud below 20 000 ft covering at least mo re than _____ the sky.",
+    "options": {
+      "A": "1/2",
+      "B": "3/4",
+      "C": "1/4",
+      "D": "1/3"
+    }
+  },
+  {
+    "question_number": 126,
+    "question": "What is the vertical separation minimum between FL290 and FL410 in RVSM airspace?",
+    "options": {
+      "A": "300 m (1000 ft)",
+      "B": "1200 m (4000 ft)",
+      "C": "600 m (2000 ft)",
+      "D": "900 m (3000 ft) Revision: Original Date: 28.12.2022 Ab-initio Technical Exam Question Bank"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 127,
+    "question": "Required Navigation Performance (RNP) is a statement of the navigation performance necessary for../////original question ..RNP is?",
+    "options": {
+      "A": "the clearance of obstacles in the approach sector.",
+      "B": "operation on aerodromes.",
+      "C": "the clearance of obstacles during take -off.",
+      "D": "operation within a defined airspace."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 130,
+    "question": "In the climb after take -off, the change from QNH to Standard Pressure Setting shall be made at..",
+    "options": {
+      "A": "the transition layer.",
+      "B": "a level specified by ATC.",
+      "C": "the transition altitude.",
+      "D": "the transition level."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 137,
+    "question": "When flying on an airway with an easterly magnetic heading, the correct flight level will be..",
+    "options": {
+      "A": "usually even.",
+      "B": "usually odd.",
+      "C": "always odd.",
+      "D": "always even. Revision: Original"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 141,
+    "question": "The acronym PAPI stands for..",
+    "options": {
+      "A": "Precision Approach Power Indicator.",
+      "B": "Precision Approach Path Index.",
+      "C": "Precision Approach Power Index.",
+      "D": "Precision Approach Path Indicator."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 144,
+    "question": "The abbreviation \"MDA\" means:",
+    "options": {
+      "A": "Minimum Decision Altitude",
+      "B": "Minimum Descent Attitude",
+      "C": "Maximum Drift Angle",
+      "D": "Minimum Descent Altitude"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 147,
+    "question": "The stopway is located at the end of the?",
+    "options": {
+      "A": "Take -Off Run Available (TORA).",
+      "B": "Accelerate -Stop Distance Available (ASDA).",
+      "C": "Landing Distance Available (LDA).",
+      "D": "Take-Off Distance Available (TODA)."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 150,
+    "question": "The Minimum Sector Altitudes (MSAs) provide an obstacle clearance of at least 300 m (1000 ft) within a circle, associated with the homing facility for the approach procedure of that aerodrome. – The circle has a radius of..",
+    "options": {
+      "A": "5 NM.",
+      "B": "20 NM.",
+      "C": "10 NM.",
+      "D": "25 NM."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 151,
+    "question": "What is the meaning of the abbreviation OCA?",
+    "options": {
+      "A": "Obstruction clearance altitude",
+      "B": "Obstacle clearance altitude",
+      "C": "Oceanic clearance area",
+      "D": "Obstacle clearance area"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 152,
+    "question": "What does the abbreviation ATIS stand for?",
+    "options": {
+      "A": "Automatic Terminal Instruction Service",
+      "B": "Automatic Terminal Information Status",
+      "C": "Automatic Terminal Information Service",
+      "D": "Automatic Transferable Information Service"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 154,
+    "question": "The transition level is..",
+    "options": {
+      "A": "the highest available flight level below the transition altitude that has been established.",
+      "B": "calculated and declared for an approach by the pilot -in command.",
+      "C": "the lowest flight level available for use above the transition altitude.",
+      "D": "published for each aerodrome in the AIP, Section MAP."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 159,
+    "question": "In a non -standard holding pattern turns are made:",
+    "options": {
+      "A": "to the right.",
+      "B": "in a direction depending on the wind direction.",
+      "C": "in either direction depending on the entry.",
+      "D": "to the left."
+    }
+  },
+  {
+    "question_number": 161,
+    "question": "When does the pilot change from flight level to altitude?",
+    "options": {
+      "A": "At the transition altitude.",
+      "B": "At the transition level.",
+      "C": "At or below the transition level.",
+      "D": "Below the transition level."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 162,
+    "question": "What is the preferred ILS glide path for a precision approach",
+    "options": {
+      "A": "2.5%",
+      "B": "3 degrees",
+      "C": "5 degrees",
+      "D": "3%"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 164,
+    "question": "What does the abbreviation DER stand for?",
+    "options": {
+      "A": "Displaced End of Runway.",
+      "B": "Distance Error in Routing.",
+      "C": "Departure End of Runway.",
+      "D": "Direct Entry Route."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 165,
+    "question": "A nautical mile is equivalent to:",
+    "options": {
+      "A": "1012 metres",
+      "B": "1609 metres",
+      "C": "1500 metres",
+      "D": "1852 metres"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 174,
+    "question": "The transition layer is the airspace located..",
+    "options": {
+      "A": "above the Transition Level.",
+      "B": "where the atmospheric pressure equals 1013.2 hPa.",
+      "C": "between the Transition Level and the Transition Altitude.",
+      "D": "below the Transition Altitude."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 191,
+    "question": "What is affected by a displaced threshold of an active runway?",
+    "options": {
+      "A": "ASDA",
+      "B": "TORA",
+      "C": "TODA",
+      "D": "LDA"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 198,
+    "question": "In which of the following ATC clearances is the QNH altimeter setting included?",
+    "options": {
+      "A": "In climb, when first cleared to an altitude above the transition level.",
+      "B": "In all climb or descent ATC clearances to an altitude.",
+      "C": "In all clearances to altitudes below 2000 ft above aerodrome level.",
+      "D": "In descent, when first cleared to an altitude below the transition level"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 216,
+    "question": "An aircraft shall display, if so equipped, an anti -collision light:",
+    "options": {
+      "A": "on the ground when the engines are running.",
+      "B": "outside the daylight -period at engine -start. During the daylight -period this is not applicable.",
+      "C": "while taxiing, but not when it is being towed.",
+      "D": "outside the daylight -period in flight, but not on the ground when it is being towed."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 232,
+    "question": "If a communications failure is experienced on an IFR flight in IMC, the pilot shall:",
+    "options": {
+      "A": "proceed to the navigation aid serving the destination aerodrome and commence descent at the estimated time of arrival or the expected approach time, whichever is later.",
+      "B": "land at the nearest suitable aerodrome.",
+      "C": "proceed to the navigation aid serving the destination aerodrome and commence descent at the expected approach time or, if no expected approach time has been received, as close as possible to the estimated time of arrival resulting from the current flight plan.",
+      "D": "try to reach VMC and land at the nearest suitable aerodrome."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 234,
+    "question": "Within RVSM airspace, between level FL 290 and FL 410, what is the vertical flight separation between RVSM approved aircraft?",
+    "options": {
+      "A": "2000 ft",
+      "B": "4000 ft",
+      "C": "3000 ft",
+      "D": "1000 ft"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 253,
+    "question": "Who is responsible for an ATC clearance to be safe in respect to terrain clearance?",
+    "options": {
+      "A": "The pilot in command.",
+      "B": "The air traffic service reporting office when accepting the flight plan.",
+      "C": "The ATC.",
+      "D": "The aircraft operator."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 261,
+    "question": "Describe where a radio -altimeter operating area should be established:",
+    "options": {
+      "A": "A radio altimeter operating area should be established in the pre - threshold area of a precision approach runway.",
+      "B": "A radio altimeter operating area should be established in the threshold area of any runway.",
+      "C": "A radio altimeter operating area should be established in the threshold area of a precision and non -precision approach runway.",
+      "D": "A radio altimeter operating area should be established in the whole runway area of a precision approach runway."
+    }
+  },
+  {
+    "question_number": 263,
+    "question": "\"ASDA\" (Acceleration Stop Distance Available) is:",
+    "options": {
+      "A": "The length of the take -off run available plus the length of the clearway.",
+      "B": "The length of the runway plus the length of stop way available (if stop way provided).",
+      "C": "The length of the take-off run available plus the length of stop way and clearway (if provided).",
+      "D": "The length of the take -off run available plus the length of stop way (if stop way provided)."
+    }
+  },
+  {
+    "question_number": 266,
+    "question": "If more than 25 % of the runway is covered by 3mm of water, the runway is considered to be:",
+    "options": {
+      "A": "Wet",
+      "B": "Contaminated",
+      "C": "Flooded",
+      "D": "Damp"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 268,
+    "question": "A specific point, measured and reported to the aeronautical information services authority in degrees, minutes and seconds, which normally corresponds to the geometric centre of an airport is:",
+    "options": {
+      "A": "The aerodrome reference point.",
+      "B": "The threshold position of the runway.",
+      "C": "The position of the tower.",
+      "D": "The midpoint of the runway."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 286,
+    "question": "Taxiway markings and aircraft stand markings are:",
+    "options": {
+      "A": "white",
+      "B": "grey",
+      "C": "red",
+      "D": "yellow"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 291,
+    "question": "What is the colour of runway edge lights?",
+    "options": {
+      "A": "Red",
+      "B": "Blue",
+      "C": "White",
+      "D": "Yellow"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 295,
+    "question": "The runway edge lights shall be:",
+    "options": {
+      "A": "blue",
+      "B": "white",
+      "C": "red",
+      "D": "green"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 324,
+    "question": "For a category I precision approach the decision height cannot be lower than:",
+    "options": {
+      "A": "200 ft.",
+      "B": "250 ft.",
+      "C": "150 ft.",
+      "D": "100 ft."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 325,
+    "question": "Where an operator establishes an aerodrome operating minima, the minima:",
+    "options": {
+      "A": "Should not be lower than any that may be established for such aerodromes by the state in which the aerodrome is located.",
+      "B": "Shall not be lower than any that may be established for such aerodromes by the state in which the aerodrome is located.",
+      "C": "Should not be higher than any that may be established for such aerodromes by the state in which the aerodrome is located.",
+      "D": "Shall not be higher than any that may be established for such aerodrom es by the state in which the aerodrome is located."
+    }
+  },
+  {
+    "question_number": 333,
+    "question": "What is a STAR?",
+    "options": {
+      "A": "Supplementary terminal arrival.",
+      "B": "Standard arrival.",
+      "C": "Special terminal arrival.",
+      "D": "Standard instrumental arrival."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 335,
+    "question": "Where does the final approach segment for a precision approach start?",
+    "options": {
+      "A": "FAH",
+      "B": "FAP",
+      "C": "IAF",
+      "D": "FAF"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 339,
+    "question": "Which of the following correctly defines aerodrome operating minima?",
+    "options": {
+      "A": "Cloud base and ground visibility for takeoff.",
+      "B": "Cloud ceiling and RVR for takeoff.",
+      "C": "Cloud base and RVR for takeoff.",
+      "D": "Cloud ceiling and ground visibility for takeoff."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 357,
+    "question": "What is the purpose of the intermediate segment of an instrument approach? This is the segment in which:",
+    "options": {
+      "A": "alignment and descent for landing are made.",
+      "B": "aircraft are normally required to hold prior to landing.",
+      "C": "gear and flaps are retracted.",
+      "D": "speed and configuration are adjusted."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 370,
+    "question": "Given:/// dry operating mass is different instead of 3 its 5 Dry Operating Mass: 33 510 kg Traffic Load: 7600 kg Trip Fuel: 2040 kg Final Reserve Fuel: 983 kg Alternate Fuel: 1100 kg Contingency Fuel: 5 % Trip Fuel Which of the listed estimated masses is correct?",
+    "options": {
+      "A": "Estimated Take -Off Mass = 45 233 kg",
+      "B": "Estimated Landing Mass at destination = 43 295 kg",
+      "C": "Estimated Take -Off Mass = 43 295 kg",
+      "D": "Estimated Landing Mass at destination = 43 193 kg"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 380,
+    "question": "You are to determine the maximum fuel load which can be carried in the following conditions: Dry Operating Mass: 2800 kg Trip Fuel: 300 kg Pay Load: 400 kg Maximum Take Off Mass: 3700 kg",
+    "options": {
+      "A": "1200 kg",
+      "B": "500 kg",
+      "C": "1000 kg",
+      "D": "700 kg"
+    }
+  },
+  {
+    "question_number": 382,
+    "question": "From which of the following would you expect to find information regarding known short unserviceability of VOR, TACAN, and NDB?",
+    "options": {
+      "A": "AIP",
+      "B": "ATCC broadcasts",
+      "C": "SIGMET",
+      "D": "NOTAM"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 384,
+    "question": "Unless otherwise stated, on charts for standard instrument departures, the depicted routes are defined as:",
+    "options": {
+      "A": "true headings.",
+      "B": "true courses.",
+      "C": "magnetic headings.",
+      "D": "magnetic courses."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 386,
+    "question": "Which approach segment starts at the FAF and ends at the MAPt?",
+    "options": {
+      "A": "Initial approach",
+      "B": "Final approach",
+      "C": "Go-around",
+      "D": "Intermediate approach"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 392,
+    "question": "Given: TAS 500 kts OAT -40 °C What is the Mach number?",
+    "options": {
+      "A": "0.82",
+      "B": "0.84",
+      "C": "0.88",
+      "D": "0.8"
+    }
+  },
+  {
+    "question_number": 393,
+    "question": "Unless otherwise shown on charts for standard instrument departure the routes are given with:",
+    "options": {
+      "A": "magnetic headings..",
+      "B": "true headings.",
+      "C": "true course",
+      "D": "magnetic course."
+    }
+  },
+  {
+    "question_number": 417,
+    "question": "A human breathing 100% oxygen at 33700 ft is the equivalent of breathing air at..",
+    "options": {
+      "A": "sea level.",
+      "B": "10000 ft.",
+      "C": "8000 ft.",
+      "D": "21300 ft."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 432,
+    "question": "The atmosphere contains the following gases:",
+    "options": {
+      "A": "78% nitrogen, 21% oxygen, 0.03% carbon dioxide, rest: rare gases.",
+      "B": "78% helium, 21% oxygen, 1% carbon monoxide, rest: rare gases.",
+      "C": "78% helium, 21% oxygen, 0.03% carbon dioxide, rest: rare gases.",
+      "D": "78% oxyg en, 21% nitrogen, 1% carbon monoxide, rest: rare gases."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 476,
+    "question": "The symptoms of hypoxia include..",
+    "options": {
+      "A": "visual disturbances, lack of concentration, euphoria.",
+      "B": "dizziness and hypothermia.",
+      "C": "dull headache and bends.",
+      "D": "nausea and barotitis."
+    }
+  },
+  {
+    "question_number": 481,
+    "question": "Air at an altitude of 18000 feet contains approximately..",
+    "options": {
+      "A": "10% oxygen.",
+      "B": "15% oxygen.",
+      "C": "5% oxygen.",
+      "D": "21% oxygen."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 484,
+    "question": "TUC (Time of Useful Consciousness) is..",
+    "options": {
+      "A": "the length of time during which an individual can act with both mental and physical efficiency after pressure loss.",
+      "B": "the time after pressure loss until decompression sickness sets in.",
+      "C": "measured from the moment at which an individual starts being exposed to hypoxia and death.",
+      "D": "the time before becoming unconscious at a sudden pressure loss."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 486,
+    "question": "The percentage of oxygen in the air at an altitude of approximately 34000 ft is",
+    "options": {
+      "A": "21%.",
+      "B": "10.5%.",
+      "C": "5%.",
+      "D": "42%."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 498,
+    "question": "hypoxia is most often caused by..",
+    "options": {
+      "A": "fluctuations in cabin altitude due to malfunction of the cabin pressurisation system.",
+      "B": "sub-aqua or scuba diving within the 48 hours following a flight.",
+      "C": "climbing to a high altitude without additional oxygen or loss of cabin pressurisation at high altitude.",
+      "D": "descending at high speed without supplementary oxygen."
+    }
+  },
+  {
+    "question_number": 562,
+    "question": "What does the term \"way point\" mean:",
+    "options": {
+      "A": "A defined position on an aerodrome used for the calibration of the inertial navigation system",
+      "B": "A signal indicating the direction of the runway -in-use",
+      "C": "A specified geographical position used to define an area navigation route or the flight path of an aircraft employing area navigation",
+      "D": "A general term meaning the taxiway - and the runway -system of an international airport"
+    }
+  },
+  {
+    "question_number": 576,
+    "question": "On a METAR BROKEN means a cloud cover of:",
+    "options": {
+      "A": "8 octas",
+      "B": "1-2 octas",
+      "C": "5-7 octas",
+      "D": "3-4 octas"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 606,
+    "question": "What does the abbreviation \"IMC\" mean?",
+    "options": {
+      "A": "Instrument meteorological conditions.",
+      "B": "In meteorological conditions.",
+      "C": "International meteorological channel.",
+      "D": "In most cases."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 606,
+    "question": "What does the abbreviation \"IMC\" mean?",
+    "options": {
+      "A": "Instrument meteorological conditions.",
+      "B": "In meteorological conditions.",
+      "C": "International meteorological channel.",
+      "D": "In most cases."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 614,
+    "question": "The frequency 121.500 MHz is designated as:",
+    "options": {
+      "A": "A frequency for air-to-air communication",
+      "B": "An airline operation frequency",
+      "C": "An international emergency frequency",
+      "D": "A regional UHF frequency"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 648,
+    "question": "What symbols will be added to a METAR message if wind shear is reported for all runways?",
+    "options": {
+      "A": "WS ALL RWY",
+      "B": "WS + runway designators",
+      "C": "WS ARWY",
+      "D": "WS and airport ICAO code"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 665,
+    "question": "In METARs SCATTERED means cloud cover of:",
+    "options": {
+      "A": "3-4 octas",
+      "B": "no significant cloud.",
+      "C": "5-7 octas",
+      "D": "1-2 octas Revision: Original Date: 28.12.2022 Ab-initio Technical Exam Question Bank"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 704,
+    "question": "You would set 7700 on the transponder when you:",
+    "options": {
+      "A": "Are in an emergency condition.",
+      "B": "Enter the UK FIR.",
+      "C": "Suffer communications failure.",
+      "D": "Are being hi -jacked."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 711,
+    "question": "What does the abbreviation \"RVR\" mean:",
+    "options": {
+      "A": "Runway visual range",
+      "B": "Runway visibility report",
+      "C": "Radar vectors requested",
+      "D": "Recleared via route..."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 733,
+    "question": "CAS is obtained from IAS by correcting for the:",
+    "options": {
+      "A": "acceleration.",
+      "B": "time.",
+      "C": "distance.",
+      "D": "velocity."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 744,
+    "question": "Due to its conception, the altimeter measures a :",
+    "options": {
+      "A": "density altitude.",
+      "B": "true altitude.",
+      "C": "temperature altitude.",
+      "D": "pressure altitude"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 750,
+    "question": "The maximum range for indication of a radio altimeter is typically from the ground to:",
+    "options": {
+      "A": "Pd = Pt + Ps",
+      "B": "Ps = Pt + Pd",
+      "C": "Pt = Pd + Ps",
+      "D": "Pd = Pt / Ps"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 765,
+    "question": "In the event of a failure, a fail -operational flight control system will operate as a:",
+    "options": {
+      "A": "fail-passive system.",
+      "B": "fail-operational hybrid system.",
+      "C": "fail-safe system.",
+      "D": "fail-redundant system."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 802,
+    "question": "Total Air Temperature (TAT) is:",
+    "options": {
+      "A": "higher or equal to Static Air Temperature (SAT)",
+      "B": "TAT is a function of altitude and SAT.",
+      "C": "Higher or equal to static air temperature (SAT), depending on altitude and SAT.",
+      "D": "lower than Static Air Temperature (SAT)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 838,
+    "question": "When flying in cold air (colder than standard atmosphere), indicated altitude is:",
+    "options": {
+      "A": "the same as the true altitude.",
+      "B": "lower than the true altitude.",
+      "C": "higher than the true altitude.",
+      "D": "equal to the standard altitude."
+    }
+  },
+  {
+    "question_number": 854,
+    "question": "What is the tropopause?",
+    "options": {
+      "A": "The layer between the troposphere and the stratosphere .",
+      "B": "Upper boundary of C.A.T.",
+      "C": "Where temperature increases with height.",
+      "D": "The boundary between the troposphere and the stratosphere."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 856,
+    "question": "The temperature lapse rate of the ICAO standard atmosphere in the troposphere is:",
+    "options": {
+      "A": "2.5°C/1000 FT",
+      "B": "6.5°C/1000 FT",
+      "C": "3°C/1000 FT",
+      "D": "2°C/1000 FT"
+    }
+  },
+  {
+    "question_number": 860,
+    "question": "What is the primary cause of all changes in the Earth's weather?",
+    "options": {
+      "A": "None of the other answers are correct.",
+      "B": "Movement of air masses from moist areas to dry areas.",
+      "C": "Variation of solar energy at the Earth's surface.",
+      "D": "Changes in air pressure over the Earth's surface."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 864,
+    "question": "QNH is defined as",
+    "options": {
+      "A": "QFE reduced to MSL using the values of the actual atmosphere",
+      "B": "pressure at MSL in the standard atmosphere",
+      "C": "pressure at MSL in the actual atmosphere",
+      "D": "QFE reduced to MSL using the values of the standard atmosphere"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 869,
+    "question": "What is meant by the term \"altitude\"?",
+    "options": {
+      "A": "The vertical distance of a level or a point measured from mean sea level.",
+      "B": "The vertical distance of a level or a point measured from the earth's surface.",
+      "C": "Altimeter indication when altimeter subscale is set to present QFE.",
+      "D": "The vertical distance of a level or a p oint measured from the aerodrome reference point."
+    }
+  },
+  {
+    "question_number": 878,
+    "question": "Dew point is defined as",
+    "options": {
+      "A": "the lowest temperature to which air must be cooled in order to reduce the relative humidity",
+      "B": "the lowest temperature at which evaporation will occur for a given pressure",
+      "C": "the temperature below which the change of state in a given volume of air will result in the absorpt ion of latent heat",
+      "D": "the temperature to which moist air must be cooled to become saturated at a given pressure"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 880,
+    "question": "What is condensation?",
+    "options": {
+      "A": "The change of state from ice to water vapour or from water vapour to ice.",
+      "B": "The change of state from water to water vapour.",
+      "C": "The change of state from water vapour to water.",
+      "D": "The change of state from ice to water."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 882,
+    "question": "An inversion is:",
+    "options": {
+      "A": "a conditionally unstable layer.",
+      "B": "a layer that can be either stable or unstable.",
+      "C": "an absolutely stable layer.",
+      "D": "an unstable layer. Revision: Original Date: 28.12.2022"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 890,
+    "question": "Clear Air Turbulence can be expected:",
+    "options": {
+      "A": "Near a jet stream and with an anabatic wind.",
+      "B": "Near a jet stream and around and above a CB cloud.",
+      "C": "With an upper level trough and in a col.",
+      "D": "Near a jet stream and in Stratus cloud."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 895,
+    "question": "At the surface the lifetime of a typical microburst and the diameter of the area affected by damaging winds are in the order of:",
+    "options": {
+      "A": "5 - 15 minutes and 8 km",
+      "B": "1 - 5 minutes and 4 km",
+      "C": "30 - 40 minutes and 4 km",
+      "D": "5 - 10 minutes and 12 km"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 899,
+    "question": "Lenticular clouds in mountainous areas indicate:",
+    "options": {
+      "A": "an inversion.",
+      "B": "unstable air.",
+      "C": "turbulence.",
+      "D": "light variable winds."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 903,
+    "question": "What is a land breeze?",
+    "options": {
+      "A": "Air moving from sea over land by night.",
+      "B": "Air moving from land over sea by day.",
+      "C": "Air moving from land over water at night.",
+      "D": "Air moving from sea over land by day."
+    }
+  },
+  {
+    "question_number": 906,
+    "question": "Which phenomenon is of ten associated with a jetstream?",
+    "options": {
+      "A": "Windshear.",
+      "B": "Both icing and windshear.",
+      "C": "Clear air turbulence (CAT)",
+      "D": "Icing."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 913,
+    "question": "Which of the following types of cloud can extend over the low, medium and high cloud levels ?",
+    "options": {
+      "A": "ST",
+      "B": "CI",
+      "C": "AC",
+      "D": "CB"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 929,
+    "question": "A super -cooled droplet is",
+    "options": {
+      "A": "a water droplet that has been frozen during its descent",
+      "B": "a water droplet that is mainly frozen",
+      "C": "a small particle of water at a temperature below -50°C",
+      "D": "a droplet still in liquid state at a temperature below 0°C"
+    }
+  },
+  {
+    "question_number": 940,
+    "question": "The final stage of a thunderstorm is reached when:",
+    "options": {
+      "A": "No further electrical charge is developed.",
+      "B": "All of the above.",
+      "C": "A well developed anvil can be seen.",
+      "D": "The lower portion of the cloud dissipates."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 949,
+    "question": "What are squall lines?",
+    "options": {
+      "A": "Unusual intensive cold fronts.",
+      "B": "Bands of intensive thunderstorms.",
+      "C": "The surface weather associated with upper air troughs.",
+      "D": "The paths of tropical revolving storms."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 979,
+    "question": "Fog (FG) is defined as being a :",
+    "options": {
+      "A": "Visibility of < 1,000 m due to any precipitation in the atmosphere.",
+      "B": "Visibility of < 1,000 m due to solid or liquid particles suspended in the atmosphere.",
+      "C": "Visibility of < 1,000 m due to liquid particles or ice crystals suspended in the atmosphere.",
+      "D": "Visibility of < = 1,000 due to liquid particles or ice crystals suspended in the atmosphere."
+    }
+  },
+  {
+    "question_number": 992,
+    "question": "In which of the following METAR reports is the probability of fog formation in the coming night the highest?",
+    "options": {
+      "A": "201850Z 15003KT 6000 SCT120 05/04 Q1032 BECMG 1600 BR=",
+      "B": "201850Z 25010KT 4000 RA BKN012 OVC030 12/10 Q1006 TEMPO 1500=",
+      "C": "201850Z 06018G30KT 5 000 -RA OVC010 04/01 Q1024 NOSIG=",
+      "D": "201850Z 21003KT 8000 SCT250 12/m08 Q1028 NOSIG="
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 993,
+    "question": "What is a trend forecast?",
+    "options": {
+      "A": "A landing forecast appended to METAR/SPECI, valid for 2 hours",
+      "B": "An aerodrome forecast valid for 9 hours",
+      "C": "A route forecast valid for 24 hours",
+      "D": "A routine report"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 998,
+    "question": "How is a ceiling defined?",
+    "options": {
+      "A": "Height above ground or water of the lowest layer of cloud below 20000 ft covering more than half of the sky.",
+      "B": "Height above ground or water of the lowest layer of cloud that contributes to the overall overcast.",
+      "C": "Height above ground or water o f the highest layer of cloud or obscuring phenomena aloft that covers 4 oktas or more of the sky.",
+      "D": "Height above ground or water of the lowest layer of cloud independent on the amount of clouds."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1000,
+    "question": "What type of meteorological hazard to safe flight is most likely to be experienced during the final approach to Geneva (ETA 1200 UTC) ? TAF LSGG 020900Z 021019 18007KT 9999 SCT020 BKN100 BECMG 1114 8000 RA SCT010 OVC020 PROB30 TEMPO 1018 VRB10G25KT TSRA",
+    "options": {
+      "A": "Anabatic winds",
+      "B": "Roll cloud associated with standing waves",
+      "C": "Radiation fog",
+      "D": "Low level wind shear"
+    }
+  },
+  {
+    "question_number": 1001,
+    "question": "In TAF and METAR decodes, DU, DZ and DS mean respectively:",
+    "options": {
+      "A": "dust, drizzle, dust and sand.",
+      "B": "dust, drizzle, dust storms.",
+      "C": "dust, dust devils, dust storms.",
+      "D": "dust devils, drizzle, dust and sand."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1032,
+    "question": "What does the abbreviation \"nosig\" mean?",
+    "options": {
+      "A": "No report received",
+      "B": "No weather related problems",
+      "C": "Not signed by the meteorologist",
+      "D": "No significant changes"
+    }
+  },
+  {
+    "question_number": 1040,
+    "question": "What does the term TREND signify?",
+    "options": {
+      "A": "It is a warning of dangerous meteorological conditions",
+      "B": "It is a landing forecast added to the actual weather report",
+      "C": "It is the actual weather report at an aerodrome and is generally issued at half-hourly intervals",
+      "D": "It is a flight forecast, issued by the meteorological station several times daily"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1051,
+    "question": "The pressure at sea level in the ISA is:",
+    "options": {
+      "A": "1012.35 hPa",
+      "B": "29.95 in Hg",
+      "C": "1013.25 hPa",
+      "D": "1025.13 hPa"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1059,
+    "question": "A temperature increase with altitude through a layer is called:",
+    "options": {
+      "A": "Unstable air.",
+      "B": "An extension.",
+      "C": "An inversion.",
+      "D": "Heating aloft."
+    }
+  },
+  {
+    "question_number": 1067,
+    "question": "The QNH of an airport at sea level is 983 hPa and the temperature deviation from ISA is -15°C below FL 100. What is the true altitude of FL 100?",
+    "options": {
+      "A": "11460 ft",
+      "B": "8640 ft",
+      "C": "10160 ft",
+      "D": "9740 ft"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1086,
+    "question": "The ICAO Standard Atmosphere (ISA) assumes that temperature will reduce at the rate of:",
+    "options": {
+      "A": "2°C per 1000 FT up to 36 090 FT after which it remains constant to 65 617 FT.",
+      "B": "2°C per 1000 FT up to 36 090 FT and will then increase at 0,3°C per 1000 FT up to 65 617 FT.",
+      "C": "2°C per 1000 FT up to 36 090 FT and will then rise at 0.3°C per 1000 FT up to 65 617 FT after which it will remain constant.",
+      "D": "2°C per 1000 FT up to 65 617 FT after which it will remain constant to 104 987 FT."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1097,
+    "question": "The heat of the earth is transferred upwards largely by:",
+    "options": {
+      "A": "Radiation",
+      "B": "Conduction.",
+      "C": "Convection.",
+      "D": "Insolation."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1132,
+    "question": "An aircraft is flying through the Alps on a warm summer's day. The weather is fine, and there is a high pressure system in the area. During the flight, a mountain is passed at an altitude of its summit. What reading will the aneroid altimeter give, compared to the summit's elevation?",
+    "options": {
+      "A": "A higher altitude than the elevation of the summit",
+      "B": "A lower altitude than the elevation of the summit",
+      "C": "There is insufficient information to come to a conclusion",
+      "D": "The same altitude as the elevation of the summit"
+    }
+  },
+  {
+    "question_number": 1145,
+    "question": "Cumulus clouds are an indication for",
+    "options": {
+      "A": "up and downdrafts",
+      "B": "stability",
+      "C": "the approach of a warm front",
+      "D": "the approach of a cold front"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1157,
+    "question": "High clouds are normally composed of:",
+    "options": {
+      "A": "Water droplets.",
+      "B": "Ice crystals.",
+      "C": "Hail.",
+      "D": "Condensation nuclei."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1176,
+    "question": "Where is icing most likely to form on an aircraft's profile?",
+    "options": {
+      "A": "on an area where the stagnation point is located",
+      "B": "on an area where you have the highest static pressure",
+      "C": "on an area where you have the lowest static pressure",
+      "D": "on an area where the centre of pressure is located"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1191,
+    "question": "When is the RVR reported at most airports?",
+    "options": {
+      "A": "When the RVR decreases below 2500 m.",
+      "B": "When the RVR decreases below 2000 m.",
+      "C": "When the visibility decreases below 2000 m.",
+      "D": "When the visibility decreases below 1500 m."
+    }
+  },
+  {
+    "question_number": 1200,
+    "question": "The Minimum Equipment List (MEL) defines the equipment which can be inoperative when undertaking a flight and the additional procedures under which this allowance can be accepted. The MEL shall be drawn up by:",
+    "options": {
+      "A": "the operator and may NOT be less restrictive than the Master Minimum Equipment List (MMEL)",
+      "B": "the manufacturer and may be less restrictive than the Master Minimum equipment List (MMEL)",
+      "C": "the operator and may be less restrictive than the Master Minimum equipment List (MMEL)",
+      "D": "the manufacturer and may be more restrictive than the Maste r Minimum Equipment List (MMEL)"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1211,
+    "question": "At a given configuration, the wake turbulence of an aeroplane is greater when the aeroplane is:",
+    "options": {
+      "A": "heavy at high airspeed.",
+      "B": "light at low airspeed.",
+      "C": "heavy at low airspeed.",
+      "D": "light at high airspeed."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1227,
+    "question": "The MMEL (Master Minimum Equipment List) is drawn up by:",
+    "options": {
+      "A": "the national authority of state of the operator.",
+      "B": "the aircraft manufacturer.",
+      "C": "the aircraft state of registry.",
+      "D": "the operator."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1270,
+    "question": "The type of hydroplaning that is most likely to occur at the touchdown area located at both ends of the runway is called:",
+    "options": {
+      "A": "roll rate",
+      "B": "stalling speed",
+      "C": "tuck under",
+      "D": "value of the stall angle of attack"
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1337,
+    "question": "Aeroplane wake turbulence during take off starts when:",
+    "options": {
+      "A": "the nose wheel lifts off the runway.",
+      "B": "out of ground effect.",
+      "C": "slats and flaps are extended only.",
+      "D": "the take off roll commences."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1345,
+    "question": "A highly concentrated and powerful downdraft of air typically less than 5 km across that lasts for 1 to 5 minutes is..",
+    "options": {
+      "A": "a microburst.",
+      "B": "a turbulent boundary layer.",
+      "C": "an inversion.",
+      "D": "a gust front."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1373,
+    "question": "If the static ports are completely clogged up by ice during a climb..",
+    "options": {
+      "A": "the vertical speed indicator will indicate zero.",
+      "B": "the current vertical speed indication will freeze.",
+      "C": "the vertical speed indicator will overread.",
+      "D": "the vertical speed indicator will underread."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1393,
+    "question": "According to OPS regulations, a Category I operation is a precision instrument approach and landing with a decision height (DH) and with a runway visual range (RVR) not less than..",
+    "options": {
+      "A": "100 ft / 350 m",
+      "B": "200 ft / 350 m",
+      "C": "200 ft / 550 m",
+      "D": "100 ft / 550 m"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1424,
+    "question": "Which of the alternatives represents the correct relationship?",
+    "options": {
+      "A": "VMCG and V 1 should not exceed V R.",
+      "B": "VMCL and V 1 should not exceed V R.",
+      "C": "V2 and V 1 should not exceed V MCG.",
+      "D": "VMCA and V R should not exceed V 1."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1431,
+    "question": "The stopway is an area which allows an increase only in the:",
+    "options": {
+      "A": "take-off distance available.",
+      "B": "landing distance available.",
+      "C": "accelerate -stop distance available.",
+      "D": "take-off run available."
+    }
+  },
+  {
+    "question_number": 1432,
+    "question": "The following parameters affect the take -off ground run: 1.decreasing take -off mass 2.increasing take -off mass 3.increasing density 4.decreasing density 5.increasing flap setting 6.decreasing flap setting 7.increasing pressure altitude 8.decreasing pressure altitude Which parameters will decrease the take -off ground run?",
+    "options": {
+      "A": "2, 4, 5 and 7",
+      "B": "2, 3, 6 and 7",
+      "C": "1, 3, 5 and 8",
+      "D": "1, 4, 6 and 8"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1435,
+    "question": "If air density increases, the take -off distance required / landing distance required will. .",
+    "options": {
+      "A": "decrease / decrease.",
+      "B": "increase / decrease.",
+      "C": "increase / increase.",
+      "D": "decrease / increase."
+    }
+  },
+  {
+    "question_number": 1436,
+    "question": "How does a change in Pressure Altitude influence the Landing Distance and Ground Roll Distance?",
+    "options": {
+      "A": "Higher Pressure Altitude results in a decreased Landing Distance Required and a decreased Ground Roll Distance .",
+      "B": "Lower Pressure Altitude results in a decreased Landing Distance Required and an increased Ground Roll Distance.",
+      "C": "Higher Pressure Altitude results in an increased Landing Distance Required and an increased Ground Roll Distance.",
+      "D": "Lower Pressure Altitude result s in an increased Landing Distance Required and a decreased Ground Roll Distance."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1439,
+    "question": "Stepped climbs are used on long -distance flights:",
+    "options": {
+      "A": "only if the headwind is less or the tailwind is greater than forecast at high altitude.",
+      "B": "to fly as close to the tropopause as possible.",
+      "C": "to fly a profile as close as possible to the optimum altitude as the aeroplane mass reduces.",
+      "D": "for piston -engined aeroplanes only not for jet aeroplanes ."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1440,
+    "question": "The speed V 1 is defined as:",
+    "options": {
+      "A": "if the tailwind component is decreased.",
+      "B": "if the aeroplane mass is increased.",
+      "C": "if the aeroplane mass is decreased.",
+      "D": "if the temperature OAT is increased."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1450,
+    "question": "What effect does temperature have on the performance limited take-off mass?",
+    "options": {
+      "A": "Falling temperatures will require a lower performance limited take -off mass.",
+      "B": "A change in temperature does not affect the performance limited take- off mass.",
+      "C": "Rising temperatures will lower the performance limited take - off mass.",
+      "D": "Rising temperatures will permit a higher performance limited take -off- mass."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1452,
+    "question": "What percentages of the head wind and tail wind component are taken into account when calculating the take -off field length required?",
+    "options": {
+      "A": "not more than 50% head wind and not less than 100% tail wind.",
+      "B": "not more than 50% head wind and not less than 150% tail wind.",
+      "C": "100% head wind and 100% tail wind.",
+      "D": "not less than 150% head wind and not more than 50% tail wind."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1457,
+    "question": "Which combination of circumstances or conditions would most likely lead to a tyre speed limited take -off?",
+    "options": {
+      "A": "A high runway elevation and a head wind.",
+      "B": "A low runway elevation and a head wind.",
+      "C": "A low runway elevation and a cross wind.",
+      "D": "A high runway elevation and tail wind."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1464,
+    "question": "During a descent with constant Mach number below the tropopause in ISA conditions, how do the TAS and CAS change? TAS",
+    "options": {
+      "A": "decreases, and CAS increases.",
+      "B": "increases, and CAS decreases.",
+      "C": "increases, and CAS increases.",
+      "D": "decreases, and CAS decreases."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1466,
+    "question": "V1 for a balanced -field is calculated when:",
+    "options": {
+      "A": "the take -off mass is field -length limited by the clearway to produce the maximum take -off mass.",
+      "B": "the acceleration/stop distance available is equal to the take -off distance available.",
+      "C": "the take -off mass is field -length limited by the stopway to produce the maximum take -off mass.",
+      "D": "the speed is equal to V2."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1478,
+    "question": "Moving the CG from an aft to a forward position during flight will",
+    "options": {
+      "A": "decrease fuel consumption and decrease the aircraft’s longitudinal stability.",
+      "B": "increase fuel consumption and decrease the aircraft’s longitudinal stability.",
+      "C": "decrease fuel consumption and increase thea ircraft’s longitudinal stability.",
+      "D": "increase fuel consumption and increase the aircraft’s longitudinal stability."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1479,
+    "question": "In which of the flight conditions listed below is the thrust equal to the drag?",
+    "options": {
+      "A": "Has no effect on the maximum permitted take-off mass.",
+      "B": "Will cause the maximum permitted take-off mass to decrease.",
+      "C": "Has no effect on the maximum permitted take-off mass up to 5,000 ft pressure altitude above which it increases.",
+      "D": "Will cause the maximum permitted take-off mass to increase"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1487,
+    "question": "The maximum rate of climb that can be maintained at the absolute ceiling is:",
+    "options": {
+      "A": "100 ft/min",
+      "B": "500 ft/min",
+      "C": "0 ft/min",
+      "D": "125 ft/min"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1500,
+    "question": "For a contaminant to be considered significant its depth must exceed:",
+    "options": {
+      "A": "10 mm of Dry Snow",
+      "B": "5 mm of Wet Snow",
+      "C": "3 mm of Water",
+      "D": "2mm of Water"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1506,
+    "question": "How do lift and drag change during the take -off roll?",
+    "options": {
+      "A": "Lift increases, and drag decreases.",
+      "B": "Lift is zero, and drag increases.",
+      "C": "Lift remains constant, and drag increases.",
+      "D": "Lift and drag increase."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1518,
+    "question": "The centre of gravity location of the aeroplane is normally computed along the:",
+    "options": {
+      "A": "vertical axis.",
+      "B": "horizontal axis.",
+      "C": "longitudinal axis.",
+      "D": "lateral axis."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1528,
+    "question": "The traffic load is a part of the..",
+    "options": {
+      "A": "Basic Empty Mass.",
+      "B": "Dry Operating Mass.",
+      "C": "Zero Fuel Mass.",
+      "D": "Operating Mass."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1532,
+    "question": "The Centre of Gravity of a body is that point..",
+    "options": {
+      "A": "which is used as the datum for computing moments.",
+      "B": "where the sum of the moments from the external forces acting on the body is equal to zero.",
+      "C": "where the sum of the external forces is equal to zero.",
+      "D": "through which the sum of the forces of all masses of the body is considered to act."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1533,
+    "question": "Take-Off Mass minus Trip Fuel Mass results in the:",
+    "options": {
+      "A": "2160",
+      "B": "2480",
+      "C": "820",
+      "D": "1340"
+    }
+  },
+  {
+    "question_number": 1561,
+    "question": "Radiation fog occurs when there is:",
+    "options": {
+      "A": "Marked increase in wind speed close to the ground.",
+      "B": "Ground cooling due to radiation.",
+      "C": "Warm air moving over warm surface.",
+      "D": "Marked increase in ground wind speed."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1566,
+    "question": "Fuel tanks are fitted with baffles to..",
+    "options": {
+      "A": "prevent spanwise fuel motion during constant sideslip.",
+      "B": "damp spanwise fuel motion in the tanks.",
+      "C": "assist in cooling the fuel.",
+      "D": "remove air bubbles from the fuel."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1581,
+    "question": "The engine air in takes of large transport aircraft are usually protected against ice by..",
+    "options": {
+      "A": "hot bleed air.",
+      "B": "hot engine oil.",
+      "C": "pressurised fluid.",
+      "D": "inflatable boots."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1599,
+    "question": "What is the minimum speed for a wind to be classified as a jet stream?",
+    "options": {
+      "A": "70 kt.",
+      "B": "100 kt.",
+      "C": "50 kt.",
+      "D": "60 kt."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1603,
+    "question": "The angle of attack of an aerofoil section is th e angle between the..",
+    "options": {
+      "A": "camber line and the horizontal.",
+      "B": "chord line and the bottom surface of the aerofoil.",
+      "C": "camber line and the downwash.",
+      "D": "chord line and the relative undisturbed airflow."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1614,
+    "question": "What are the primary roll controls on a conventional aeroplane?",
+    "options": {
+      "A": "that the critical Mach number is significantly lower.",
+      "B": "a severe pitch down moment when the centre of pressure shifts forward.",
+      "C": "the tendency of the wing root section to stall prior to the wingtip section. . D) the tendency of the wingtip section to stall prior to the wing root section.",
+      "D": "To promote an earlier separation of the boundary layer. 118/1631 What are the disadvantages of wing sweepback?"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1633,
+    "question": "Given a constant load factor, which of these statements about the variation of induced drag with changes of speed and mass are correct or incorrect?"
+  },
+  {
+    "question_number": 1644,
+    "question": "Which of the following combinations is likely to result in the most accurate Area Navigation (RNAV) fixes?",
+    "options": {
+      "A": "VOR/DME",
+      "B": "VOR/VOR",
+      "C": "NDB/VOR",
+      "D": "DME/DME"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1654,
+    "question": "Rotation around the lateral axis is called:",
+    "options": {
+      "A": "pitching",
+      "B": "rolling",
+      "C": "slipping",
+      "D": "yawing."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1662,
+    "question": "Positive static stability of an aeroplane means that following a disturbance from the equilibrium condition:",
+    "options": {
+      "A": "the initial tendency is to return towards its equilibrium condition.",
+      "B": "the tendency is to move with an oscillatory motion of decreasing amplitude.",
+      "C": "the initial tendency is to diverge further from its eq uilibrium condition.",
+      "D": "the tendency is to move with an oscillatory motion of increasing amplitude."
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1663,
+    "question": "The Mach number is the ratio between the:",
+    "options": {
+      "A": "IAS of the aeroplane and the speed of sound at sea level.",
+      "B": "TAS of the aeroplane and the speed of sound at sea level.",
+      "C": "IAS of the aeroplane and the speed of sound of the undisturbed flow.",
+      "D": "TAS of the aeroplane and the speed of sound of the undisturbed airflow"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1678,
+    "question": "The angle between the aeroplane longitudinal axis and the wing root chord line is the:",
+    "options": {
+      "A": "in the configuration where both the leading and trailing edge flaps are fully extended.",
+      "B": "in the configuration where only the trailing edge flaps are fully extended.",
+      "C": "in the clean configuration.",
+      "D": "in the configuration where only the leading edge slats are fully extended."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1710,
+    "question": "What is the effect of increasing wing aspect ratio on induced drag?",
+    "options": {
+      "A": "It reduces because the effect of wing -tip vortices is reduced.",
+      "B": "It increases because increasing aspect ratio produces greater downwash.",
+      "C": "It is unaffected because there is no relation between aspect ratio and induced drag.",
+      "D": "It increases because increasing aspect ratio increases frontal area."
+    }
+  },
+  {
+    "question_number": 1717,
+    "question": "A slotted flap will increase the CL MAX by:",
+    "options": {
+      "A": "the bow wave in front of the wing.",
+      "B": "boundary layer control.",
+      "C": "interaction between flow separation and shock wave motion.",
+      "D": "a shift of the centre of gravity."
+    }
+  },
+  {
+    "question_number": 1871,
+    "question": "Which of these statements about induced drag are correct or incorrect? I. Induced drag increases as angle of attack decreases. II. At constant load factor, induced drag increases with decreasing aeroplane mass.",
+    "options": {
+      "A": "I is correct, II is correct.",
+      "B": "I is incorrect, II is correct.",
+      "C": "I is correct, II is incorrect.",
+      "D": "I is incorrect, II is incorrect."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1880,
+    "question": "The most forward CG location may be limited by://similar question but the same answer 1) insufficient flare capability. 2) excessive in -flight manoeuvrability. 3) insufficient in -flight manoeuvrability. The combination that regroups all of the correct statements is:",
+    "options": {
+      "A": "1,2",
+      "B": "2",
+      "C": "1,3",
+      "D": "3"
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 1895,
+    "question": "What does ADF stand for?"
+  },
+  {
+    "question_number": 1897,
+    "question": "What causes the so -called night effect?",
+    "options": {
+      "A": "The absence of the surface wave at distances larger than the skip distance.",
+      "B": "The difference in velocity of the EM -waves over land and over sea, at night.",
+      "C": "A change in the direction of the plane of polarisation due to reflection in the ionosphere.",
+      "D": "Interference between the ground and the space w ave."
+    }
+  },
+  {
+    "question_number": 1901,
+    "question": "NDB is the abbreviation for:",
+    "options": {
+      "A": "Navigation Director Beacon.",
+      "B": "Night Directional Beacon.",
+      "C": "Non Directional Bearing.",
+      "D": "Non Directional Beacon ."
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1909,
+    "question": "When the term \"radial\" is used in reference to VOR it means:",
+    "options": {
+      "A": "the magnetic bearing from the VOR station",
+      "B": "the magnetic bearing of the aircraft to the station",
+      "C": "the true bea ring from the VOR station",
+      "D": "the magnetic bearing of the VOR station"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 1926,
+    "question": "The selection of the DME frequency for a ILS/DME installation is as follows:// the original is without the last two words",
+    "options": {
+      "A": "When an ILS/ DME is flown then selection of the DME has always to be done manually.",
+      "B": "The DME frequency is paired with the localizer frequency so only the localizer frequency is set.",
+      "C": "The DME frequency has to be selected by the pilot.",
+      "D": "The pilot has to insert the channel number and also the X or Y."
+    },
+    "correct_answer": "B"
+  },
+  {
+    "question_number": 1967,
+    "question": "The selection of code 7600 on an aircraft SSR transponder indicates:",
+    "options": {
+      "A": "unlawful interference with the planned operation of the flight",
+      "B": "an emergency",
+      "C": "transponder malfunction",
+      "D": "radio communication failure"
+    },
+    "correct_answer": "D"
+  },
+  {
+    "question_number": 1992,
+    "question": "One of the benefits of RNAV is:",
+    "options": {
+      "A": "RNAV allows to fly at RNAV flight level with a 500 ft separation.",
+      "B": "RNAV allows pilots to manage horizontal and vertical separation with other aircrafts without obtaining any ATC clearance.",
+      "C": "RNAV allows aircraft to take a more direct flight path without requiring to fly over ground based facilities.",
+      "D": "RNAV allows to obtain ATC clearance by HF radio without the requirement to establish any radio contact."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 2008,
+    "question": "How does a VOR/DME Area Navigation system selects the DME -stations to be used for positioning?",
+    "options": {
+      "A": "the pilot tunes the closest VOR/DME stations within range on the VOR/DME Area navigation control panel.",
+      "B": "The VOR/DME Area Navigation system uses whatev er stations are tuned on the aircraft's normal VHF NAV selector.",
+      "C": "The VOR/DME Area Navigation system has its own NAV tuner and the system itself tunes the DME stations providing the most accurate position.",
+      "D": "The VOR/DME Area Navigation System has its ow n VHF NAV tuner and it always tunes the DME stations closest to the aircraft position."
+    }
+  },
+  {
+    "question_number": 2013,
+    "question": "The IRS is a self -contained system because:",
+    "options": {
+      "A": "the calculation of the position does not require any software.",
+      "B": "the system generates a warning in case of a failure.",
+      "C": "it operates independently of navigational aids outside the aircraft.",
+      "D": "it operates off its own power supply."
+    },
+    "correct_answer": "C"
+  },
+  {
+    "question_number": 2046,
+    "question": "What is the minimum number of satellites required by a GPS in order to obtain",
+    "options": {
+      "A": "4",
+      "B": "6",
+      "C": "5",
+      "D": "3"
+    },
+    "correct_answer": "A"
+  },
+  {
+    "question_number": 2051,
+    "question": "What datum is used for the Minimum Descent Altitude (MDA) on a non - precision approach when using the NAVSTAR/G PS satellite navigation system?",
+    "options": {
+      "A": "Radar altitude",
+      "B": "Barometric altitude",
+      "C": "If using Differential -GPS (D -GPS) the altitude obtained from the D -GPS, otherwise barometric altitude",
+      "D": "GPS altitude"
+    },
+    "correct_answer": "B"
+  }
+]
