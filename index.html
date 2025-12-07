@@ -26300,8 +26300,8 @@
             const displayNumber = currentQuestionIndex + 1;
             const totalQuestions = currentQuestions.length;
             
-            // Update question display
-            questionText.textContent = question.question_text;
+            // Update question display (handle both 'question_text' and 'question' field names)
+            questionText.textContent = question.question_text || question.question;
             questionNumber.textContent = `Question ${displayNumber}`;
             questionInfo.textContent = `Question ${displayNumber} of ${totalQuestions}`;
             
